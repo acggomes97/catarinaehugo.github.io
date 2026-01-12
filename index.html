@@ -3,98 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Casamento Ana & João</title>
+<title>Casamento Catarina & Hugo</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header e Menu -->
+<!-- Header -->
 <header>
-  <div class="menu">
-    <nav>
-      <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#galeria">Fotos</a></li>
-        <li><a href="#musicas">Sugestões de Músicas</a></li>
-        <li><a href="#alojamento">Alojamento</a></li>
-        <li><a href="#contactos">Contactos</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="#hero">Catarina & Hugo</a></li>
+      <li><a href="#nosso-dia">O Nosso Dia</a></li>
+      <li><a href="#musica">Música</a></li>
+      <li><a href="#contactos">Mensagem dos Noivos & Contactos</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero / Catarina & Hugo -->
 <section id="hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Ana & João</h1>
+    <h1>Catarina & Hugo</h1>
     <p class="date">12 de Junho de 2026</p>
     <p class="local">Igreja São Pedro - 15h | Quinta Encanto - 17h</p>
     <div id="countdown"></div>
+    <a href="#nosso-dia" class="btn">Ver O Nosso Dia</a>
   </div>
   <canvas id="petalas"></canvas>
 </section>
 
-<!-- Galeria de Fotos -->
-<section id="galeria" class="fade-section">
-  <h2>Galeria</h2>
-  <div class="gallery">
-    <div class="photo"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
-    <div class="photo"><img src="https://images.unsplash.com/photo-1509228627157-4c4a32f7b0ee?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
-    <div class="photo"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
+<!-- O Nosso Dia / Timeline -->
+<section id="nosso-dia" class="fade-section">
+  <h2>O Nosso Dia</h2>
+  <div class="timeline">
+    <div class="event">
+      <div class="time">15h</div>
+      <div class="desc">Cerimónia na Igreja São Pedro</div>
+    </div>
+    <div class="event">
+      <div class="time">17h</div>
+      <div class="desc">Receção na Quinta Encanto</div>
+    </div>
+    <div class="event">
+      <div class="time">19h</div>
+      <div class="desc">Jantar e Celebração</div>
+    </div>
   </div>
 </section>
 
-<!-- Sugestões de Músicas -->
-<section id="musicas" class="fade-section">
-  <h2>Sugestões de Músicas</h2>
+<!-- Música -->
+<section id="musica" class="fade-section">
+  <h2>Música</h2>
   <form id="musicasForm">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="text" name="musica" placeholder="Sugestão de música" required>
-      <textarea name="mensagem" placeholder="Mensagem opcional"></textarea>
-      <button type="submit">Enviar</button>
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="text" name="musica" placeholder="Sugestão de música" required>
+    <textarea name="mensagem" placeholder="Mensagem opcional"></textarea>
+    <button type="submit">Enviar</button>
   </form>
   <p id="respostaMusica"></p>
 </section>
 
-<!-- Alojamento -->
-<section id="alojamento" class="fade-section">
-  <h2>Alojamento</h2>
-  <div class="cards">
-      <div class="card">
-          <h3>Hotel Encanto</h3>
-          <p>Rua das Flores, 123 - Lisboa</p>
-          <a href="#">Ver mapa</a>
-      </div>
-      <div class="card">
-          <h3>Pousada do Amor</h3>
-          <p>Avenida dos Noivos, 45 - Lisboa</p>
-          <a href="#">Ver mapa</a>
-      </div>
-      <div class="card">
-          <h3>Apartamentos Verde</h3>
-          <p>Travessa do Romance, 8 - Lisboa</p>
-          <a href="#">Ver mapa</a>
-      </div>
-  </div>
-</section>
-
-<!-- Contactos -->
+<!-- Mensagem dos Noivos & Contactos -->
 <section id="contactos" class="fade-section">
-  <h2>Contactos</h2>
+  <h2>Mensagem dos Noivos & Contactos</h2>
+  <p class="mensagem-noivos">“Mal podemos esperar para celebrar este dia especial com todos vocês!”</p>
+  <div class="info-contactos">
+    <p><strong>Catarina:</strong> +351 912 345 678 | cat@exemplo.com</p>
+    <p><strong>Hugo:</strong> +351 923 456 789 | hugo@exemplo.com</p>
+  </div>
   <form id="contactForm">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu email" required>
-      <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-      <button type="submit">Enviar</button>
+    <input type="text" name="nome" placeholder="Seu nome" required>
+    <input type="email" name="email" placeholder="Seu email" required>
+    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+    <button type="submit">Enviar</button>
   </form>
   <p id="respostaContato"></p>
 </section>
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2026 Ana & João | Todos os direitos reservados</p>
+  <p>&copy; 2026 Catarina & Hugo | Todos os direitos reservados</p>
 </footer>
 
 <script src="script.js"></script>
