@@ -26,7 +26,7 @@ function updateCountdown(){
 const interval=setInterval(updateCountdown,1000);
 updateCountdown();
 
-// Fade-in nas seções
+// Fade-in
 const sections=document.querySelectorAll('.fade-section');
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
@@ -35,15 +35,15 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:0.2});
 sections.forEach(sec=>observer.observe(sec));
 
-// Pétalas caindo
+// Pétalas animadas
 const canvas=document.getElementById('petalas');
 const ctx=canvas.getContext('2d');
 canvas.width=window.innerWidth; canvas.height=window.innerHeight;
 const petals=[];
-for(let i=0;i<50;i++){petals.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*5+2,speed:Math.random()*1+0.5})}
+for(let i=0;i<60;i++){petals.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*5+2,speed:Math.random()*1+0.5})}
 function drawPetals(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle='rgba(181,28,28,0.7)';
+    ctx.fillStyle='rgba(212,175,55,0.7)';
     petals.forEach(p=>{
         ctx.beginPath();
         ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
