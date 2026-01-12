@@ -1,75 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catarina & Hugo - Nosso Casamento</title>
-  <style>
-    body {font-family: 'Helvetica', sans-serif; margin:0; padding:0; background:#fefefe; color:#333;}
-    header {background:#f9e6e6; text-align:center; padding:50px 20px;}
-    header h1 {margin:0; font-size:3em; color:#d94f5d;}
-    header p {font-size:1.2em; color:#555;}
-    section {padding:60px 20px; max-width:800px; margin:0 auto;}
-    h2 {text-align:center; color:#d94f5d; margin-bottom:30px;}
-    .event-details, .rsvp, .gifts, .gallery, .map {margin-bottom:60px;}
-    .rsvp form {display:flex; flex-direction:column; gap:15px;}
-    .rsvp input, .rsvp textarea, .rsvp button {padding:10px; font-size:1em;}
-    .rsvp button {background:#d94f5d; color:white; border:none; cursor:pointer;}
-    footer {background:#f9e6e6; text-align:center; padding:30px 20px; color:#555;}
-    .gallery img {width:100%; max-width:250px; margin:10px; border-radius:10px;}
-    .flex {display:flex; flex-wrap:wrap; justify-content:center;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casamento Ana & João</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Header e Menu -->
 <header>
-  <h1>Catarina & Hugo</h1>
-  <p>Nosso casamento - 12 de Janeiro de 2026</p>
+  <div class="menu">
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#galeria">Fotos</a></li>
+        <li><a href="#musicas">Sugestões de Músicas</a></li>
+        <li><a href="#alojamento">Alojamento</a></li>
+        <li><a href="#contactos">Contactos</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<section class="our-story">
-  <h2>Nossa História</h2>
-  <p>Há 5 anos nos conhecemos e desde então temos vivido aventuras incríveis juntos. Agora vamos celebrar o nosso amor com todos vocês!</p>
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Ana & João</h1>
+    <p class="date">12 de Junho de 2026</p>
+    <p class="local">Igreja São Pedro - 15h | Quinta Encanto - 17h</p>
+    <div id="countdown"></div>
+  </div>
+  <canvas id="petalas"></canvas>
 </section>
 
-<section class="event-details">
-  <h2>Detalhes do Evento</h2>
-  <p><strong>Cerimônia:</strong> 12 de Janeiro de 2026, 16:00, Igreja de São José, Lisboa</p>
-  <p><strong>Festa:</strong> 12 de Janeiro de 2026, 19:00, Espaço Jardim Encantado, Lisboa</p>
-</section>
-
-<section class="rsvp">
-  <h2>Confirme sua Presença</h2>
-  <form action="https://docs.google.com/forms/d/e/SEU_FORMULARIO/viewform?usp=sf_link" method="get" target="_blank">
-    <input type="text" name="nome" placeholder="Seu Nome" required>
-    <input type="email" name="email" placeholder="Seu Email" required>
-    <textarea name="mensagem" placeholder="Mensagem (opcional)"></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-<section class="gifts">
-  <h2>Lista de Presentes</h2>
-  <p>Se desejar nos presentear, confira nossa lista de presentes em <a href="#">link da loja</a>.</p>
-</section>
-
-<section class="gallery">
-  <h2>Galeria de Fotos</h2>
-  <div class="flex">
-    <img src="foto1.jpg" alt="Catarina & Hugo">
-    <img src="foto2.jpg" alt="Catarina & Hugo">
-    <img src="foto3.jpg" alt="Catarina & Hugo">
+<!-- Galeria de Fotos -->
+<section id="galeria" class="fade-section">
+  <h2>Galeria</h2>
+  <div class="gallery">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1509228627157-4c4a32f7b0ee?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
+    <div class="photo"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Noivos"></div>
   </div>
 </section>
 
-<section class="map">
-  <h2>Localização</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.091394518432!2d-9.139337684681812!3d38.71693807964364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19336b4f8c3c3d%3A0x5c1b91d26e4f5eb7!2sIgreja%20de%20S%C3%A3o%20Jos%C3%A9%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1588913374167!5m2!1spt-PT!2spt" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<!-- Sugestões de Músicas -->
+<section id="musicas" class="fade-section">
+  <h2>Sugestões de Músicas</h2>
+  <form id="musicasForm">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="text" name="musica" placeholder="Sugestão de música" required>
+      <textarea name="mensagem" placeholder="Mensagem opcional"></textarea>
+      <button type="submit">Enviar</button>
+  </form>
+  <p id="respostaMusica"></p>
 </section>
 
+<!-- Alojamento -->
+<section id="alojamento" class="fade-section">
+  <h2>Alojamento</h2>
+  <div class="cards">
+      <div class="card">
+          <h3>Hotel Encanto</h3>
+          <p>Rua das Flores, 123 - Lisboa</p>
+          <a href="#">Ver mapa</a>
+      </div>
+      <div class="card">
+          <h3>Pousada do Amor</h3>
+          <p>Avenida dos Noivos, 45 - Lisboa</p>
+          <a href="#">Ver mapa</a>
+      </div>
+      <div class="card">
+          <h3>Apartamentos Verde</h3>
+          <p>Travessa do Romance, 8 - Lisboa</p>
+          <a href="#">Ver mapa</a>
+      </div>
+  </div>
+</section>
+
+<!-- Contactos -->
+<section id="contactos" class="fade-section">
+  <h2>Contactos</h2>
+  <form id="contactForm">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+  </form>
+  <p id="respostaContato"></p>
+</section>
+
+<!-- Footer -->
 <footer>
-  <p>© 2026 Catarina & Hugo. Todos os direitos reservados.</p>
+  <p>&copy; 2026 Ana & João | Todos os direitos reservados</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
