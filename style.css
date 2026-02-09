@@ -52,20 +52,19 @@ nav ul li a:hover {
   align-items: center;
   text-align: center;
   color: white;
-  background: url('https://acggomes97.github.io/catarinaehugo.github.io/casamento.jpeg') center/cover no-repeat; /* tua imagem */
+  background: url('https://acggomes97.github.io/catarinaehugo.github.io/casamento.jpeg') center/cover no-repeat;
   overflow: hidden;
 }
 
+/* Overlay escuro */
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
+/* Conteúdo do hero */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -104,11 +103,116 @@ nav ul li a:hover {
 
 .btn:hover {
   background: #800020;
-  color: #fff;
 }
 
-/* Seções */
-section {
+/* Fade-in APENAS para secções animadas */
+section.fade-section {
   padding: 80px 20px;
   text-align: center;
   opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+section:nth-child(even) {
+  background: #fffaf0;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Títulos */
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #800020;
+  margin-bottom: 30px;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #d4af37;
+  width: 80px;
+  text-align: right;
+}
+
+.desc {
+  font-size: 1.1em;
+}
+
+/* Formulários */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button {
+  background: #d4af37;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #800020;
+}
+
+/* Mensagem dos noivos */
+.mensagem-noivos {
+  font-style: italic;
+  color: #800020;
+  margin-bottom: 20px;
+}
+
+.info-contactos p {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  background: #800020;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Canvas pétalas */
+#petalas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
