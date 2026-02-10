@@ -54,36 +54,34 @@ nav ul li a:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* começa do topo */
   align-items: center;
-  gap: 40px;
+  gap: 30px;
+  padding-top: 60px; /* espaço no topo para o contador */
   text-align: center;
+  position: relative;
 }
 
-/* contador em cima */
-/* contador em cima da foto */
+/* contador em cima (agora não sobre a foto) */
 .countdown {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 2.5em;
   font-weight: bold;
-  color: #d4af37; /* dourado elegante */
-  text-shadow: 0 0 15px rgba(0,0,0,0.7);
-  background: rgba(0,0,0,0.3);
+  color: #800020; /* vermelho elegante */
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: rgba(255, 255, 255, 0.7);
   padding: 10px 20px;
   border-radius: 10px;
-  z-index: 2;
   font-family: 'Great Vibes', cursive;
+  z-index: 2;
 }
 
-/* foto mais pequena */
+/* foto abaixo do contador */
 .hero-img {
   width: 90%;
   max-width: 500px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 1;
 }
 
 /* canvas festa */
