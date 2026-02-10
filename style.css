@@ -12,6 +12,7 @@ body {
   font-family: 'Playfair Display', serif;
   color: #333;
   scroll-behavior: smooth;
+  background: #f8f5f2;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -47,53 +48,45 @@ nav ul li a:hover {
   color: #d4af37;
 }
 
-/* ---------------- HERO FOTO ---------------- */
+/* ---------------- HERO ---------------- */
 
 #hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* foto como fundo absoluto */
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
 }
 
 /* contador em cima */
 .countdown {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  text-align: center;
   font-size: 2.5em;
   font-weight: bold;
-  color: white;
-  text-shadow: 0 0 20px rgba(0,0,0,0.9);
-  z-index: 2;
+  color: #800020;
+}
+
+/* foto mais pequena */
+.hero-img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 /* canvas festa */
 #festa {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 3;
+  z-index: 10;
 }
 
-/* ---------------- SEÇÕES ---------------- */
-
-/* fade apenas para secções com classe fade-section */
+/* ---------------- FADE SECTIONS ---------------- */
 
 .fade-section {
   padding: 80px 20px;
@@ -136,7 +129,6 @@ footer {
 
   .countdown {
     font-size: 1.6em;
-    top: 25px;
   }
 
   nav ul {
