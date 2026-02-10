@@ -54,19 +54,19 @@ nav ul li a:hover {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* começa do topo */
+  justify-content: flex-start;
   align-items: center;
   gap: 30px;
-  padding-top: 60px; /* espaço no topo para o contador */
+  padding-top: 60px;
   text-align: center;
   position: relative;
 }
 
-/* contador em cima (agora não sobre a foto) */
+/* contador em cima */
 .countdown {
   font-size: 2.5em;
   font-weight: bold;
-  color: #800020; /* vermelho elegante */
+  color: #800020;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
   background: rgba(255, 255, 255, 0.7);
   padding: 10px 20px;
@@ -93,6 +93,48 @@ nav ul li a:hover {
   height: 100%;
   pointer-events: none;
   z-index: 10;
+}
+
+/* ---------------- IGREJA & QUINTA ---------------- */
+
+#igreja {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 50px;               /* espaço entre Igreja e Quinta */
+  flex-wrap: wrap;          /* quebra em mobile */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.local-box {
+  flex: 1 1 300px;         /* largura mínima 300px */
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centraliza conteúdo */
+  background: #fffaf0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.local-box h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  color: #800020;
+  margin-bottom: 10px;
+}
+
+.local-box p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.local-box iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px;
 }
 
 /* ---------------- FADE SECTIONS ---------------- */
@@ -146,5 +188,14 @@ footer {
 
   nav ul li {
     margin: 10px 0;
+  }
+
+  #igreja {
+    flex-direction: column; /* empilha caixas em mobile */
+    gap: 30px;
+  }
+
+  .local-box iframe {
+    height: 200px;
   }
 }
