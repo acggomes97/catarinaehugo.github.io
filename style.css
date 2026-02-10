@@ -93,7 +93,9 @@ nav ul li a:hover {
 
 /* ---------------- SEÇÕES ---------------- */
 
-section {
+/* fade apenas para secções com classe fade-section */
+
+.fade-section {
   padding: 80px 20px;
   text-align: center;
   opacity: 0;
@@ -101,7 +103,7 @@ section {
   transition: 1s;
 }
 
-section.fade-in {
+.fade-section.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
