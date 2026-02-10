@@ -1,7 +1,7 @@
 /* ---------------- CONTAGEM REGRESSIVA ---------------- */
 
 const countdownEl = document.getElementById('countdown');
-const weddingDate = new Date('2026-06-12T15:00:00');
+const weddingDate = new Date('2026-05-23T11:00:00');
 
 function updateCountdown() {
   const now = new Date();
@@ -20,7 +20,7 @@ function updateCountdown() {
   const seconds = Math.floor((diff / 1000) % 60);
 
   countdownEl.textContent =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    `${days} dias ${hours}h ${minutes}m ${seconds}s`;
 }
 
 const interval = setInterval(updateCountdown, 1000);
