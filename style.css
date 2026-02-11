@@ -18,7 +18,7 @@ header {
   position: sticky;
   top: 0;
   background: rgba(255,255,255,0.95);
-  z-index: 1000;
+  z-index: 1000; /* sempre acima de todo o conteúdo */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -57,6 +57,8 @@ nav ul li a:hover {
   padding-top: 60px;
   text-align: center;
   position: relative;
+  z-index: 1; /* acima do canvas */
+  background: #f8f5f2;
 }
 
 /* contador em cima */
@@ -89,7 +91,15 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 10;
+  z-index: 0; /* atrás do conteúdo */
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+  position: relative;       /* permite z-index funcionar */
+  z-index: 1;               /* acima do canvas */
+  scroll-margin-top: 80px;  /* compensa o header sticky */
+  background: #fffaf0;      /* fundo sólido */
 }
 
 /* ---------------- IGREJA & QUINTA ---------------- */
