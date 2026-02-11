@@ -18,7 +18,7 @@ header {
   position: sticky;
   top: 0;
   background: rgba(255,255,255,0.95);
-  z-index: 1000; /* sempre acima de tudo */
+  z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -48,6 +48,7 @@ nav ul li a:hover {
 
 /* ---------------- HERO ---------------- */
 #hero {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -56,25 +57,31 @@ nav ul li a:hover {
   gap: 30px;
   padding-top: 60px;
   text-align: center;
-  position: relative;
-  z-index: 1; /* acima do canvas */
   background: #f8f5f2;
 }
 
-/* contador em cima */
+#festa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .countdown {
   font-size: 2.5em;
   font-weight: bold;
   color: #800020;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255,255,255,0.7);
   padding: 10px 20px;
   border-radius: 10px;
   font-family: 'Great Vibes', cursive;
   z-index: 2;
 }
 
-/* foto abaixo do contador */
 .hero-img {
   width: 90%;
   max-width: 500px;
@@ -83,25 +90,25 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-/* canvas festa */
-#festa {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0; /* atrás do conteúdo */
-}
-
 /* ---------------- SECTIONS ---------------- */
 section {
-  position: relative;       /* permite z-index funcionar */
-  z-index: 1;               /* acima do canvas */
-  scroll-margin-top: 80px;  /* compensa o header sticky */
-  background: #fffaf0;      /* fundo sólido para visibilidade */
+  position: relative;
+  z-index: 1;
+  scroll-margin-top: 80px;
+  background: #fffaf0;
   padding: 80px 20px;
   text-align: center;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s;
+}
+
+.fade-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------------- IGREJA & QUINTA ---------------- */
@@ -141,18 +148,6 @@ section {
   height: 250px;
   border: none;
   border-radius: 10px;
-}
-
-/* ---------------- FADE SECTIONS ---------------- */
-.fade-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 1s;
-}
-
-.fade-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* ---------------- TÍTULOS ---------------- */
