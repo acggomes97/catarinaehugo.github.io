@@ -71,14 +71,14 @@ nav ul li a:hover {
 }
 
 .countdown {
-  font-size: 1.8em; /* menor que antes */
+  font-size: 2em; /* menor que antes */
   font-weight: bold;
   color: #800020;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
   background: rgba(255,255,255,0.7);
-  padding: 8px 15px;
+  padding: 10px 20px;
   border-radius: 10px;
-  font-family: 'Allura', cursive; /* fancy */
+  font-family: 'Roboto Mono', monospace; /* tipo contador */
   z-index: 2;
 }
 
