@@ -9,9 +9,9 @@
 :root {
   --color-bg: #f4f1ed;         /* fundo principal */
   --color-text: #2e2e2e;       /* texto normal */
-  --color-primary: #800020;    /* headers e menus */
+  --color-primary: #800020;    /* vermelho antigo */
   --color-accent: #bfa256;     /* dourado antigo */
-  --color-box: #f9f6f2;        /* background boxes */
+  --color-box: #f9f6f2;        /* boxes internas */
 }
 
 /* ---------------- BODY ---------------- */
@@ -27,18 +27,18 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--color-bg); /* cor do fundo */
-  box-shadow: 2px solid var(--color-primary); /* delineada a vermelho */
+  background: var(--color-bg);             /* fundo da página */
+  border-bottom: 2px solid var(--color-primary); /* delineada a vermelho */
+  padding: 10px 20px;
 }
 
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  position: relative;
 }
 
 /* Logo (iniciais) */
@@ -46,10 +46,10 @@ nav {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8em;
   font-weight: bold;
-  color: var(--color-primary); /* vermelho */
+  color: var(--color-primary);
 }
 
-/* Links da navbar */
+/* Navbar links */
 .nav-list {
   display: flex;
   list-style: none;
@@ -63,7 +63,7 @@ nav {
 
 .nav-list li a {
   text-decoration: none;
-  color: var(--color-primary); /* vermelho */
+  color: var(--color-primary);
   font-weight: 700;
   font-family: 'Playfair Display', serif;
   padding: 10px 0;
@@ -72,35 +72,7 @@ nav {
 }
 
 .nav-list li a:hover {
-  color: var(--color-accent); /* dourado ao passar o mouse */
-  letter-spacing: 1px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-/* Links da navbar */
-nav ul li a {
-  text-decoration: none;
-  color: #ffffff; /* texto branco */
-  font-weight: 700;
-  font-family: 'Playfair Display', serif; /* menus */
-  padding: 15px 0;
-  display: block;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #800020; /* vermelho antigo ao passar o mouse */
+  color: var(--color-accent);
   letter-spacing: 1px;
 }
 
@@ -108,7 +80,7 @@ nav ul li a:hover {
 .menu-toggle {
   display: none;
   font-size: 2em;
-  color: var(--color-primary); /* vermelho */
+  color: var(--color-primary);
   cursor: pointer;
   user-select: none;
 }
@@ -138,23 +110,23 @@ nav ul li a:hover {
 }
 
 .countdown {
-  font-size: 1.8em; /* menor que antes */
+  font-size: 1.8em;
   font-weight: bold;
   color: var(--color-primary);
   text-shadow: 0 0 5px rgba(0,0,0,0.3);
   background: var(--color-bg);
   padding: 6px 14px;
   border-radius: 8px;
-  font-family: 'Roboto Mono', monospace; /* estilo relógio */
+  font-family: 'Roboto Mono', monospace;
   z-index: 2;
 }
 
-/* Hero Image – Página Inicial */
+/* Hero Image */
 .hero-img {
   width: 80%;
   max-width: 800px;
   height: 530px;
-  object-fit: cover;  /* ajusta para preencher horizontalmente sem distorcer */
+  object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   margin: 0 auto;
@@ -202,7 +174,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--color-box);
+  background: #eae4da; /* cor diferente do fundo principal */
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
@@ -304,11 +276,11 @@ h2 {
   color: var(--color-primary);
 }
 
-/* Contactos */
+/* ---------------- CONTACTOS ---------------- */
 .frase-impactante {
   font-family: 'Cormorant Garamond', cursive;
   font-size: 2em;
-  color: var(--color-primary);
+  color: var(--color-accent);
   font-style: italic;
   margin-bottom: 20px;
 }
@@ -338,17 +310,17 @@ footer {
 
   .nav-list {
     flex-direction: column;
-    background: var(--color-bg); /* cor do fundo */
-    border-top: 2px solid var(--color-primary); /* delineada a vermelho */
+    background: var(--color-bg);
+    border-top: 2px solid var(--color-primary);
     width: 100%;
     position: absolute;
-    top: 60px; /* abaixo do header */
+    top: 60px;
     left: 0;
-    display: none; /* inicialmente escondido */
+    display: none;
   }
 
   .nav-list.active {
-    display: flex; /* mostra o menu ao clicar no hamburger */
+    display: flex;
   }
 
   .nav-list li {
@@ -359,21 +331,6 @@ footer {
   .nav-list li a {
     font-size: 1.2em;
     padding: 12px 0;
-  }
-}
-
-  nav ul {
-    flex-direction: column;
-     background: #d4af37; /* mantém fundo dourado no mobile */
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-     padding: 12px 0;
-    font-size: 1.2em; /* aumenta um pouco para toque mais fácil */
   }
 
   #igreja-quinta {
