@@ -217,16 +217,25 @@ section {
   text-align: center;
 }
 
+.wedding-icon {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #bfa256; /* dourado */
+  filter: drop-shadow(0 0 8px rgba(191,162,86,0.5));
+}
+
 .local-box {
   flex: 1 1 300px;
   max-width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #eae4da; /* cor diferente do fundo principal */
+  background: rgba(234, 228, 218, 0.5); /* leve dourado translúcido */
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid rgba(191,162,86,0.2); /* moldura subtil */
 }
 
 .local-box h3 {
