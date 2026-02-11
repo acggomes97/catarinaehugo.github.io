@@ -18,7 +18,7 @@ header {
   position: sticky;
   top: 0;
   background: rgba(255,255,255,0.95);
-  z-index: 1000; /* sempre acima de todo o conteúdo */
+  z-index: 1000; /* sempre acima de tudo */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -99,7 +99,9 @@ section {
   position: relative;       /* permite z-index funcionar */
   z-index: 1;               /* acima do canvas */
   scroll-margin-top: 80px;  /* compensa o header sticky */
-  background: #fffaf0;      /* fundo sólido */
+  background: #fffaf0;      /* fundo sólido para visibilidade */
+  padding: 80px 20px;
+  text-align: center;
 }
 
 /* ---------------- IGREJA & QUINTA ---------------- */
@@ -108,8 +110,6 @@ section {
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  padding: 80px 20px;
-  text-align: center;
 }
 
 .local-box {
@@ -145,8 +145,6 @@ section {
 
 /* ---------------- FADE SECTIONS ---------------- */
 .fade-section {
-  padding: 80px 20px;
-  text-align: center;
   opacity: 0;
   transform: translateY(50px);
   transition: 1s;
@@ -155,10 +153,6 @@ section {
 .fade-section.fade-in {
   opacity: 1;
   transform: translateY(0);
-}
-
-section:nth-child(even) {
-  background: #fffaf0;
 }
 
 /* ---------------- TÍTULOS ---------------- */
@@ -241,7 +235,6 @@ footer {
 
 /* ---------------- RESPONSIVO ---------------- */
 @media (max-width: 600px) {
-
   .countdown {
     font-size: 1.6em;
   }
