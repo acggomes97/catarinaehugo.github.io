@@ -114,9 +114,13 @@ section {
 /* ---------------- IGREJA & QUINTA ---------------- */
 #igreja {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* centra os boxes dentro do container */
   gap: 50px;
   flex-wrap: wrap;
+  max-width: 1200px; /* largura máxima do container */
+  margin: 0 auto;    /* centraliza o container na página */
+  padding: 80px 20px; /* mantém espaçamento interno */
+  text-align: center;
 }
 
 .local-box {
