@@ -352,8 +352,25 @@ footer {
 
 /* ---------------- RESPONSIVO ---------------- */
 @media (max-width: 600px) {
+    /* Ajustes do Hero para mobile */
+  .hero-text h1 {
+    font-size: 2em;           /* menor para caber na tela */
+    letter-spacing: 1px;
+  }
+
+  .hero-text p {
+    font-size: 1.5em;         /* menor para mobile */
+    padding-top: 5px;         /* espaço confortável acima da data */
+  }
+  
   .countdown {
     font-size: 1.4em;
+    margin-top: 25px;         /* afasta do texto da data */
+  }
+
+  .hero-img {
+    width: 90%;               /* ocupa quase toda a largura */
+    height: 400px;            /* altura proporcional ao mobile */
   }
 
   .menu-toggle {
