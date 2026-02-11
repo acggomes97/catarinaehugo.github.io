@@ -121,6 +121,17 @@ nav {
   z-index: 2;
 }
 
+.countdown {
+  /* efeito dourado "glow" */
+  box-shadow: 0 0 15px rgba(191, 162, 86, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 15px rgba(191, 162, 86, 0.5); }
+  100% { box-shadow: 0 0 25px rgba(191, 162, 86, 0.8); }
+}
+
 #catarina-hugo {
    display: flex;
   flex-direction: column;
@@ -131,30 +142,23 @@ nav {
   text-align: center;
 }
 
-.hero-intro h1 {
-  font-family: 'Cormorant Garamond', cursive;
-  font-size: 4em;
-  color: var(--color-primary); /* vermelho antigo */
-  margin-bottom: 10px;
+.hero-text {
+  text-align: center;
+  margin-bottom: 30px; /* espaço entre o texto e a imagem */
 }
 
-.hero-intro h3 {
-  font-family: 'Cormorant Garamond', cursive;
-  font-size: 2em;
-  color: var(--color-accent); /* dourado antigo */
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
-.hero-intro .countdown {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2em;
+.hero-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
   color: var(--color-primary);
-  background: rgba(255,255,255,0.2); /* semi-transparente */
-  padding: 12px 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.hero-text p {
+  font-size: 1.5em;
+  color: var(--color-accent);
+  margin-bottom: 15px;
+}
+
 
 /* Hero Image */
 .hero-img {
