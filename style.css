@@ -27,23 +27,53 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #d4af37; /* dourado */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: var(--color-bg); /* cor do fundo */
+  box-shadow: 2px solid var(--color-primary); /* delineada a vermelho */
 }
 
 nav {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
+/* Logo (iniciais) */
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--color-primary); /* vermelho */
+}
+
+/* Links da navbar */
 .nav-list {
   display: flex;
-  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.nav-list li {
+  margin: 0 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: var(--color-primary); /* vermelho */
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  padding: 10px 0;
+  display: block;
   transition: 0.3s;
+}
+
+.nav-list li a:hover {
+  color: var(--color-accent); /* dourado ao passar o mouse */
+  letter-spacing: 1px;
 }
 
 nav ul {
@@ -78,11 +108,8 @@ nav ul li a:hover {
 .menu-toggle {
   display: none;
   font-size: 2em;
-  color: white;
+  color: var(--color-primary); /* vermelho */
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 20px;
   user-select: none;
 }
 
@@ -311,22 +338,29 @@ footer {
 
   .nav-list {
     flex-direction: column;
-    background: #d4af37;
+    background: var(--color-bg); /* cor do fundo */
+    border-top: 2px solid var(--color-primary); /* delineada a vermelho */
     width: 100%;
     position: absolute;
     top: 60px; /* abaixo do header */
-    left: -100%; /* escondido fora da tela */
-    transition: 0.3s;
+    left: 0;
+    display: none; /* inicialmente escondido */
   }
 
   .nav-list.active {
-    left: 0; /* desliza para dentro */
+    display: flex; /* mostra o menu ao clicar no hamburger */
   }
 
   .nav-list li {
-    margin: 15px 0;
+    margin: 10px 0;
     text-align: center;
   }
+
+  .nav-list li a {
+    font-size: 1.2em;
+    padding: 12px 0;
+  }
+}
 
   nav ul {
     flex-direction: column;
