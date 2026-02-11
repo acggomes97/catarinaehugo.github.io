@@ -110,14 +110,16 @@ nav {
 }
 
 .countdown {
-  font-size: 1.8em;
+  font-size: 1.0em;
   font-weight: bold;
-  color: var(--color-primary);
-  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  color: var(--color-accent); /* dourado */
+  text-shadow: 0 0 4px rgba(191,162,86,0.7);
   background: var(--color-bg);
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 8px;
   font-family: 'Roboto Mono', monospace;
+  box-shadow: 0 0 10px rgba(191,162,86,0.5);
+  animation: glow 2s ease-in-out infinite alternate;
   z-index: 2;
 }
 
@@ -128,34 +130,39 @@ nav {
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 15px rgba(191, 162, 86, 0.5); }
-  100% { box-shadow: 0 0 25px rgba(191, 162, 86, 0.8); }
+  0% { box-shadow: 0 0 10px rgba(191, 162, 86, 0.5); }
+  100% { box-shadow: 0 0 20px rgba(191, 162, 86, 0.8); }
 }
 
 #catarina-hugo {
    display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   padding: 60px 20px;
   background: var(--color-bg);
   text-align: center;
 }
 
+/* Texto acima da imagem */
 .hero-text {
   text-align: center;
-  margin-bottom: 30px; /* espaço entre o texto e a imagem */
+  margin-bottom: 20px; /* espaço entre o texto e a imagem */
 }
 
 .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3em;
-  color: var(--color-primary);
+  font-size: 3.2em;
+  color: var(--color-accent); /* dourado */
+  front-weight: bold;
+  text-shadow: 0 0 8px rgba(191,162,86,0.7); /* brilho suave */
 }
 
 .hero-text p {
-  font-size: 1.5em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2em;
   color: var(--color-accent);
+  text-shadow: 0 0 6px rgba(191,162,86,0.6); /* brilho suave */
   margin-bottom: 15px;
 }
 
