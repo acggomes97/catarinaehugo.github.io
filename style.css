@@ -153,17 +153,19 @@ nav {
 .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.2em;
-  color: var(--color-accent); /* dourado */
+  color: #bfa256; /* dourado mais suave */
   front-weight: bold;
-  text-shadow: 0 0 8px rgba(191,162,86,0.7); /* brilho suave */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1); /* sombra discreta */
+  letter-spacing: 2px; /* elegante */
 }
 
 .hero-text p {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2em;
-  color: var(--color-accent);
-  text-shadow: 0 0 6px rgba(191,162,86,0.6); /* brilho suave */
-  margin-bottom: 15px;
+  color: #a8874f; /* dourado bem subtil */
+  font-weight: 500;
+  border-top: 1px solid rgba(191,162,86,0.4); /* linha fina acima da data */
+  padding-top: 8px;
 }
 
 
