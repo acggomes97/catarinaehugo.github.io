@@ -22,12 +22,12 @@ body {
   background: var(--color-bg);
 }
 
-/* ---------------- HEADER ---------------- */
+/* ---------------- HEADER & NAV ---------------- */
 header {
   position: sticky;
   top: 0;
-  background: #d4af37; /* dourado */
   z-index: 1000;
+  background: #d4af37; /* dourado */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -35,6 +35,8 @@ nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -278,10 +280,16 @@ footer {
 
   nav ul {
     flex-direction: column;
+     background: #d4af37; /* mantém fundo dourado no mobile */
   }
 
   nav ul li {
     margin: 10px 0;
+  }
+
+  nav ul li a {
+     padding: 12px 0;
+    font-size: 1.2em; /* aumenta um pouco para toque mais fácil */
   }
 
   #igreja-quinta {
