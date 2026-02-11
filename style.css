@@ -31,6 +31,20 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -57,6 +71,18 @@ nav ul li a {
 nav ul li a:hover {
   color: #800020; /* vermelho antigo ao passar o mouse */
   letter-spacing: 1px;
+}
+
+/* Hamburger (mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  user-select: none;
 }
 
 /* ---------------- HERO ---------------- */
@@ -276,6 +302,29 @@ footer {
 @media (max-width: 600px) {
   .countdown {
     font-size: 1.4em;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    background: #d4af37;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* abaixo do header */
+    left: -100%; /* escondido fora da tela */
+    transition: 0.3s;
+  }
+
+  .nav-list.active {
+    left: 0; /* desliza para dentro */
+  }
+
+  .nav-list li {
+    margin: 15px 0;
+    text-align: center;
   }
 
   nav ul {
