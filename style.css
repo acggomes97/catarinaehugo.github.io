@@ -1,5 +1,4 @@
 /* ---------------- RESET ---------------- */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@
 }
 
 /* ---------------- BODY ---------------- */
-
 body {
   font-family: 'Playfair Display', serif;
   color: #333;
@@ -16,7 +14,6 @@ body {
 }
 
 /* ---------------- HEADER ---------------- */
-
 header {
   position: sticky;
   top: 0;
@@ -38,7 +35,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #800020;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
   padding: 15px 0;
   display: block;
   transition: 0.3s;
@@ -49,7 +47,6 @@ nav ul li a:hover {
 }
 
 /* ---------------- HERO ---------------- */
-
 #hero {
   min-height: 100vh;
   display: flex;
@@ -96,22 +93,21 @@ nav ul li a:hover {
 }
 
 /* ---------------- IGREJA & QUINTA ---------------- */
-
 #igreja {
   display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 50px;               /* espaço entre Igreja e Quinta */
-  flex-wrap: wrap;          /* quebra em mobile */
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
   padding: 80px 20px;
   text-align: center;
 }
 
 .local-box {
-  flex: 1 1 300px;         /* largura mínima 300px */
+  flex: 1 1 300px;
   max-width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: center;     /* centraliza conteúdo */
+  align-items: center;
   background: #fffaf0;
   padding: 20px;
   border-radius: 15px;
@@ -138,7 +134,6 @@ nav ul li a:hover {
 }
 
 /* ---------------- FADE SECTIONS ---------------- */
-
 .fade-section {
   padding: 80px 20px;
   text-align: center;
@@ -157,7 +152,6 @@ section:nth-child(even) {
 }
 
 /* ---------------- TÍTULOS ---------------- */
-
 h2 {
   font-family: 'Great Vibes', cursive;
   font-size: 2.5em;
@@ -165,8 +159,69 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Playfair Display', serif;
+}
 
+.event {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.event .time {
+  font-weight: bold;
+  color: #d4af37;
+  min-width: 60px;
+}
+
+.event .desc {
+  font-size: 1.1em;
+}
+
+/* Formulários */
+form input, form textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+}
+
+form button {
+  padding: 10px 25px;
+  background: #800020;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #d4af37;
+  color: #800020;
+}
+
+/* Contactos */
+.frase-impactante {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  color: #800020;
+  margin-bottom: 20px;
+}
+
+/* ---------------- FOOTER ---------------- */
 footer {
   background: #800020;
   color: white;
@@ -175,7 +230,6 @@ footer {
 }
 
 /* ---------------- RESPONSIVO ---------------- */
-
 @media (max-width: 600px) {
 
   .countdown {
@@ -191,7 +245,7 @@ footer {
   }
 
   #igreja {
-    flex-direction: column; /* empilha caixas em mobile */
+    flex-direction: column;
     gap: 30px;
   }
 
