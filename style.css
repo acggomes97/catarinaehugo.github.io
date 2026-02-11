@@ -122,9 +122,38 @@ nav {
 }
 
 #catarina-hugo {
-  position: relative;
-  min-height: 100vh;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 60px 20px;
+  background: var(--color-bg);
   text-align: center;
+}
+
+.hero-intro h1 {
+  font-family: 'Cormorant Garamond', cursive;
+  font-size: 4em;
+  color: var(--color-primary); /* vermelho antigo */
+  margin-bottom: 10px;
+}
+
+.hero-intro h3 {
+  font-family: 'Cormorant Garamond', cursive;
+  font-size: 2em;
+  color: var(--color-accent); /* dourado antigo */
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.hero-intro .countdown {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2em;
+  color: var(--color-primary);
+  background: rgba(255,255,255,0.2); /* semi-transparente */
+  padding: 12px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 /* Hero Image */
@@ -137,45 +166,8 @@ nav {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   margin: 0 auto;
   display: block;
-  filter: brightness(0.75); /* escurece um pouco para destacar o texto */
 }
 
-.hero-text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.hero-text-overlay h1 {
-  font-family: 'Cormorant Garamond', cursive;
-  font-size: 4em;
-  color: #800020;
-}
-
-.hero-text-overlay h3 {
-  font-family: 'Cormorant Garamond', cursive;
-  font-size: 2em;
-  color: #bfa256;
-  font-style: italic;
-}
-
-.hero-text-overlay .countdown {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2em;
-  background: rgba(255, 255, 255, 0.2); /* fundo semi-transparente */
-  color: #800020;
-  padding: 12px 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  text-align: center;
-}
 
 /* ---------------- SECTIONS ---------------- */
 section {
