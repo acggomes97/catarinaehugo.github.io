@@ -121,6 +121,7 @@ nav {
   box-shadow: 0 0 10px rgba(191,162,86,0.5);
   animation: glow 2s ease-in-out infinite alternate;
   z-index: 2;
+  margin-top: 20px;
 }
 
 .countdown {
@@ -153,9 +154,11 @@ nav {
 .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.2em;
-  color: #bfa256; /* dourado mais suave */
+  color: #800020; /* vermelho antigo */
   front-weight: bold;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1); /* sombra discreta */
+  text-shadow: 
+    0 0 5px rgba(255, 215, 0, 0.4),   /* brilho dourado suave */
+    0 0 10px rgba(255, 215, 0, 0.2);  /* brilho extra */
   letter-spacing: 2px; /* elegante */
 }
 
