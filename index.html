@@ -18,7 +18,7 @@
 <!-- Header -->
 <header>
   <nav>
-    <div class="menu-toggle">☰</div> <!-- botão para abrir o menu no telemóvel -->
+    <div class="menu-toggle">☰</div> <!-- botão hamburger -->
     <ul class="nav-list">
       <li><a href="#catarina-hugo">Catarina & Hugo</a></li>
       <li><a href="#igreja-quinta">Igreja & Quinta</a></li>
@@ -100,6 +100,16 @@
 <footer>
   <p>&copy; Catarina & Hugo | 23.05.2026 </p>
 </footer>
+
+<!-- Script hamburger -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navList = document.querySelector('.nav-list');
+
+  toggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
 
 <script src="script.js"></script>
 </body>
