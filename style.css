@@ -47,7 +47,7 @@ nav ul li a:hover {
 }
 
 /* ---------------- HERO ---------------- */
-#hero {
+#catarina-hugo {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -112,7 +112,7 @@ section {
 }
 
 /* ---------------- IGREJA & QUINTA ---------------- */
-#igreja {
+#igreja-quinta {
   display: flex;
   justify-content: center; /* centra os boxes dentro do container */
   gap: 50px;
@@ -246,7 +246,7 @@ footer {
     margin: 10px 0;
   }
 
-  #igreja {
+  #igreja-quinta {
     flex-direction: column;
     gap: 30px;
   }
