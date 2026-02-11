@@ -110,18 +110,18 @@ nav {
 }
 
 .countdown {
-  font-size: 1.0em;
-  font-weight: normal;
+  font-size: 0.95em;
+  font-weight: 300;
   color: var(--color-accent); /* dourado */
-  text-shadow: 0 0 4px rgba(191,162,86,0.7);
   background: var(--color-bg);
   padding: 5px 12px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-family: 'Roboto Mono', monospace;
   box-shadow: 0 0 10px rgba(191,162,86,0.5);
   animation: glow 2s ease-in-out infinite alternate;
+  letter-spacing: 1px;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .countdown {
