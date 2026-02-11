@@ -7,7 +7,7 @@
 
 /* ---------------- BODY ---------------- */
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif; /* texto normal */
   color: #333;
   scroll-behavior: smooth;
   background: #f8f5f2;
@@ -36,7 +36,7 @@ nav ul li a {
   text-decoration: none;
   color: #800020;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   padding: 15px 0;
   display: block;
   transition: 0.3s;
@@ -47,7 +47,7 @@ nav ul li a:hover {
 }
 
 /* ---------------- HERO ---------------- */
-#catarina-hugo {
+#hero {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -78,7 +78,7 @@ nav ul li a:hover {
   background: rgba(255,255,255,0.7);
   padding: 10px 20px;
   border-radius: 10px;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alex Brush', cursive; /* títulos fancy */
   z-index: 2;
 }
 
@@ -114,12 +114,12 @@ section {
 /* ---------------- IGREJA & QUINTA ---------------- */
 #igreja-quinta {
   display: flex;
-  justify-content: center; /* centra os boxes dentro do container */
+  justify-content: center; /* centraliza boxes lado a lado */
   gap: 50px;
   flex-wrap: wrap;
-  max-width: 1200px; /* largura máxima do container */
-  margin: 0 auto;    /* centraliza o container na página */
-  padding: 80px 20px; /* mantém espaçamento interno */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
   text-align: center;
 }
 
@@ -136,7 +136,7 @@ section {
 }
 
 .local-box h3 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alex Brush', cursive;
   font-size: 2em;
   color: #800020;
   margin-bottom: 10px;
@@ -156,7 +156,7 @@ section {
 
 /* ---------------- TÍTULOS ---------------- */
 h2 {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alex Brush', cursive;
   font-size: 2.5em;
   color: #800020;
   margin-bottom: 30px;
@@ -167,7 +167,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .event {
@@ -195,7 +195,7 @@ form input, form textarea {
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1em;
 }
 
@@ -205,7 +205,7 @@ form button {
   color: white;
   border: none;
   border-radius: 8px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1em;
   cursor: pointer;
   transition: 0.3s;
@@ -218,7 +218,7 @@ form button:hover {
 
 /* Contactos */
 .frase-impactante {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Alex Brush', cursive;
   font-size: 2em;
   color: #800020;
   margin-bottom: 20px;
