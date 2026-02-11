@@ -111,7 +111,6 @@ nav {
 
 .countdown {
   font-size: 1.0em;
-  font-weight: bold;
   color: var(--color-accent); /* dourado */
   text-shadow: 0 0 4px rgba(191,162,86,0.7);
   background: var(--color-bg);
