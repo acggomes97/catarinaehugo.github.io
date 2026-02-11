@@ -43,6 +43,7 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: 0.3s;
 }
 
 nav ul {
