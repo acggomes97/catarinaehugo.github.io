@@ -5,12 +5,21 @@
   box-sizing: border-box;
 }
 
+/* ---------------- VARIÁVEIS DE CORES ---------------- */
+:root {
+  --color-bg: #f4f1ed;         /* fundo principal */
+  --color-text: #2e2e2e;       /* texto normal */
+  --color-primary: #4b1d24;    /* headers e menus */
+  --color-accent: #bfa256;     /* dourado antigo */
+  --color-box: #fffaf0;        /* background boxes */
+}
+
 /* ---------------- BODY ---------------- */
 body {
-  font-family: 'Cormorant Garamond', serif; /* texto normal */
-  color: #333;
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-text);
   scroll-behavior: smooth;
-  background: #f8f5f2;
+  background: var(--color-bg);
 }
 
 /* ---------------- HEADER ---------------- */
@@ -19,7 +28,7 @@ header {
   top: 0;
   background: rgba(255,255,255,0.95);
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
 }
 
 nav ul {
@@ -34,16 +43,17 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #800020;
+  color: var(--color-primary);
   font-weight: 700;
-  font-family: 'Playfair Display', cursive; /* menu */
+  font-family: 'Playfair Display', serif; /* menus */
   padding: 15px 0;
   display: block;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #d4af37;
+  color: var(--color-accent);
+  letter-spacing: 1px;
 }
 
 /* ---------------- HERO ---------------- */
@@ -57,7 +67,7 @@ nav ul li a:hover {
   gap: 30px;
   padding-top: 60px;
   text-align: center;
-  background: #f8f5f2;
+  background: var(--color-bg);
 }
 
 #festa {
@@ -73,12 +83,12 @@ nav ul li a:hover {
 .countdown {
   font-size: 2em; /* menor que antes */
   font-weight: bold;
-  color: #800020;
-  text-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background: rgba(255,255,255,0.7);
-  padding: 10px 20px;
+  color: var(--color-primary);
+  text-shadow: 0 0 8px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.75);
+  padding: 8px 18px;
   border-radius: 10px;
-  font-family: 'Roboto Mono', monospace; /* tipo contador */
+  font-family: 'Roboto Mono', monospace; /* estilo relógio */
   z-index: 2;
 }
 
@@ -86,7 +96,7 @@ nav ul li a:hover {
   width: 90%;
   max-width: 500px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   z-index: 1;
 }
 
@@ -95,9 +105,11 @@ section {
   position: relative;
   z-index: 1;
   scroll-margin-top: 80px;
-  background: #fffaf0;
+  background: var(--color-box);
   padding: 80px 20px;
   text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.04);
 }
 
 .fade-section {
@@ -114,7 +126,7 @@ section {
 /* ---------------- IGREJA & QUINTA ---------------- */
 #igreja-quinta {
   display: flex;
-  justify-content: center; /* centraliza boxes lado a lado */
+  justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
   max-width: 1200px;
@@ -129,22 +141,21 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fffaf0;
+  background: var(--color-box);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .local-box h3 {
-  font-family: 'Playfair Display', serif; /* títulos dentro do box */
+  font-family: 'Cormorant Garamond', cursive;
   font-size: 2em;
-  color: #800020;
+  color: var(--color-primary);
   margin-bottom: 10px;
 }
 
 .local-box p {
   font-size: 1.1em;
-  font-family: 'Cormorant Garamond', serif; /* texto normal */
   margin-bottom: 15px;
 }
 
@@ -155,12 +166,13 @@ section {
   border-radius: 10px;
 }
 
-/* ---------------- TÍTULOS SEÇÃO ---------------- */
+/* ---------------- TÍTULOS ---------------- */
 h2 {
-  font-family: 'Playfair Display', serif; /* títulos grandes */
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.5em;
-  color: #800020;
+  color: var(--color-primary);
   margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 /* Timeline */
@@ -180,14 +192,14 @@ h2 {
 
 .event .time {
   font-weight: bold;
-  color: #d4af37;
+  color: var(--color-accent);
   min-width: 60px;
-  font-family: inherit; /* herda Cormorant Garamond */
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .event .desc {
   font-size: 1.1em;
-  font-family: inherit; /* herda Cormorant Garamond */
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* Formulários */
@@ -204,7 +216,7 @@ form input, form textarea {
 
 form button {
   padding: 10px 25px;
-  background: #800020;
+  background: var(--color-primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -215,21 +227,21 @@ form button {
 }
 
 form button:hover {
-  background: #d4af37;
-  color: #800020;
+  background: var(--color-accent);
+  color: var(--color-primary);
 }
 
 /* Contactos */
 .frase-impactante {
-  font-family: 'Playfair Display', serif; /* frases especiais */
+  font-family: 'Cormorant Garamond', cursive;
   font-size: 2em;
-  color: #800020;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
 /* ---------------- FOOTER ---------------- */
 footer {
-  background: #800020;
+  background: var(--color-primary);
   color: white;
   padding: 20px;
   text-align: center;
