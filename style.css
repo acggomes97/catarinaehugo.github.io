@@ -111,6 +111,7 @@ nav {
 
 .countdown {
   font-size: 1.0em;
+  font-weight: normal;
   color: var(--color-accent); /* dourado */
   text-shadow: 0 0 4px rgba(191,162,86,0.7);
   background: var(--color-bg);
@@ -154,10 +155,7 @@ nav {
   font-family: 'Cormorant Garamond', serif;
   font-size: 3.2em;
   color: #800020; /* vermelho antigo */
-  front-weight: bold;
-  text-shadow: 
-    0 0 5px rgba(255, 215, 0, 0.4),   /* brilho dourado suave */
-    0 0 10px rgba(255, 215, 0, 0.2);  /* brilho extra */
+  front-weight: 600;
   letter-spacing: 2px; /* elegante */
 }
 
