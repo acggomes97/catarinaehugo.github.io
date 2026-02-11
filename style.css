@@ -97,8 +97,9 @@ nav ul li a:hover {
 .hero-img {
   width: 80%;
   max-width: 800px;
-  height: 700px;
+  height: 600px;
   object-fit: cover;  /* ajusta para preencher horizontalmente sem distorcer */
+  object-position: top;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   margin: 0 auto;
