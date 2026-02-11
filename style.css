@@ -36,7 +36,7 @@ nav ul li a {
   text-decoration: none;
   color: #800020;
   font-weight: 700;
-  font-family: 'Allura', cursive; /* menu com Allura */
+  font-family: 'Allura', cursive; /* menu */
   padding: 15px 0;
   display: block;
   transition: 0.3s;
@@ -71,14 +71,14 @@ nav ul li a:hover {
 }
 
 .countdown {
-  font-size: 2em; /* contador mais pequeno */
+  font-size: 1.8em; /* menor que antes */
   font-weight: bold;
   color: #800020;
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
   background: rgba(255,255,255,0.7);
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 10px;
-  font-family: 'Allura', cursive; /* contador fancy */
+  font-family: 'Allura', cursive; /* fancy */
   z-index: 2;
 }
 
@@ -136,7 +136,7 @@ section {
 }
 
 .local-box h3 {
-  font-family: 'Allura', cursive;
+  font-family: 'Playfair Display', serif; /* títulos dentro do box */
   font-size: 2em;
   color: #800020;
   margin-bottom: 10px;
@@ -144,6 +144,7 @@ section {
 
 .local-box p {
   font-size: 1.1em;
+  font-family: 'Cormorant Garamond', serif; /* texto normal */
   margin-bottom: 15px;
 }
 
@@ -154,9 +155,9 @@ section {
   border-radius: 10px;
 }
 
-/* ---------------- TÍTULOS ---------------- */
+/* ---------------- TÍTULOS SEÇÃO ---------------- */
 h2 {
-  font-family: 'Allura', cursive;
+  font-family: 'Playfair Display', serif; /* títulos grandes */
   font-size: 2.5em;
   color: #800020;
   margin-bottom: 30px;
@@ -177,15 +178,16 @@ h2 {
   align-items: center;
 }
 
-.event .time, .event .desc {
-  font-family: inherit; /* mantém Cormorant Garamond */
-  font-size: 1.1em;
-}
-
 .event .time {
   font-weight: bold;
   color: #d4af37;
   min-width: 60px;
+  font-family: inherit; /* herda Cormorant Garamond */
+}
+
+.event .desc {
+  font-size: 1.1em;
+  font-family: inherit; /* herda Cormorant Garamond */
 }
 
 /* Formulários */
@@ -219,7 +221,7 @@ form button:hover {
 
 /* Contactos */
 .frase-impactante {
-  font-family: 'Allura', cursive;
+  font-family: 'Playfair Display', serif; /* frases especiais */
   font-size: 2em;
   color: #800020;
   margin-bottom: 20px;
