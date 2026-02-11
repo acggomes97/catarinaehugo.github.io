@@ -26,9 +26,9 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.95);
+  background: #d4af37; /* dourado */
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -41,9 +41,10 @@ nav ul li {
   margin: 0 20px;
 }
 
+/* Links da navbar */
 nav ul li a {
   text-decoration: none;
-  color: var(--color-primary);
+  color:  #800020; /* vermelho antigo para contraste */
   font-weight: 700;
   font-family: 'Playfair Display', serif; /* menus */
   padding: 15px 0;
@@ -52,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: var(--color-accent);
+  color: #fff; /* ou um tom mais claro de dourado ao passar o mouse */
   letter-spacing: 1px;
 }
 
