@@ -208,71 +208,33 @@ section {
 /* ---------------- IGREJA & QUINTA ---------------- */
 
 /* Wrapper branco envolvendo os dois locais */
-.igreja-quinta-wrapper {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+.white-box {
   display: flex;
-  flex-direction: row;   /* lado a lado no desktop */
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  max-width: 1300px;
-  margin: 0 auto 80px auto;
-  flex-wrap: wrap; /* para mobile empilhar */
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
 }
 
-/* Ícone acima */
+/* Local boxes */
+#igreja-quinta .local-box {
+  flex: 1;
+  background: transparent; /* remover cor de fundo anterior */
+  padding: 0;              /* opcional */
+  box-shadow: none;        /* remover sombras */
+}
+
+/* Wedding icon */
 .wedding-icon {
   font-size: 3em;
-  color: #bfa256; /* dourado */
   text-align: center;
-  width: 100%;
-  margin-bottom: 30px;
-  filter: drop-shadow(0 0 8px rgba(191,162,86,0.5));
-}
-
-/* Cada local */
-.local-box {
-  flex: 1 1 400px;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(234,228,218,0.5); /* leve tom dourado */
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  border: 1px solid rgba(191,162,86,0.2);
-  margin-bottom: 20px;
-}
-
-.local-box h3 {
-  font-family: 'Cormorant Garamond', cursive;
-  font-size: 2em;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-}
-
-.local-box .hora {
-  font-size: 2em;
-  font-weight: bold;
   color: var(--color-accent);
-  margin-bottom: 10px;
-}
-
-.local-box p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-}
-
-.local-box iframe {
-  width: 100%;
-  height: 250px;
-  border: none;
-  border-radius: 10px;
+  margin: 0 15px; /* espaço entre igreja e quinta */
 }
 
 /* Horas grandes e douradas */
