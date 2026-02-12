@@ -74,3 +74,24 @@ window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
+
+/* -------- animação timeline -------- */
+
+const timeline = document.querySelector('.timeline');
+const events = document.querySelectorAll('.timeline .event');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      timeline.classList.add('animate');
+
+      events.forEach((event, i) => {
+        setTimeout(() => {
+          event.classList.add('show');
+        }, i * 150); // delay em cascata
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+observer.observe(timeline);
