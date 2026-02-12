@@ -443,6 +443,8 @@ h2 {
 #musicasForm textarea::placeholder {
   color: rgba(191,162,86,0.5);
   font-style: italic;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.5px;
 }
 
 
