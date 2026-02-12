@@ -499,13 +499,13 @@ h2 {
 }
 
 #musicasForm button {
-  padding: 12px 25px;
-  font-size: 1.1em;
-  font-weight: 600;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 500;
   background: var(--color-primary);
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
 }
