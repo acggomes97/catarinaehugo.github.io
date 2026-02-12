@@ -128,14 +128,23 @@
 <!-- Música -->
 <section id="musica">
   <h2>Música</h2>
-  <p class="frase-musica">A música não pode faltar neste dia tão especial!</p>
+  <p class="frase-musica">Ajuda-nos a criar a playlist perfeita ✦</p>
+
   <form id="musicasForm">
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="text" name="musica" placeholder="Sugestão de música" required>
-    <textarea name="mensagem" placeholder="Mensagem opcional"></textarea>
-    <button type="submit">Submeter</button>
+    <!-- Sugestão de música -->
+    <label for="sugestao">✨ Sugestão de Música</label>
+    <input type="text" id="sugestao" name="sugestao" placeholder="Ex: Clair de Lune - Debussy" required>
+
+    <!-- Link opcional -->
+    <label for="link">✨ Link da Gravação (opcional)</label>
+    <input type="url" id="link" name="link" placeholder="https://">
+
+    <!-- Mensagem opcional -->
+    <label for="mensagem">✨ Mensagem (opcional)</label>
+    <textarea id="mensagem" name="mensagem" placeholder="Queremos saber a tua história com esta música..."></textarea>
+
+    <button type="submit">Enviar Música ✦</button>
   </form>
-  <p id="respostaMusica"></p>
 </section>
 
 <!-- Contactos -->
