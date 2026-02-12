@@ -207,31 +207,34 @@ section {
 }
 
 /* ---------------- NOSSO DIA - TIMELINE ---------------- */
+/* Título "O Nosso Dia" */
 #nosso-dia h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2em;
   color: var(--color-primary);
-  text-align: center;   /* título centralizado */
+  text-align: center;       /* título centrado */
   letter-spacing: 1px;
-  margin-bottom: 40px;  /* espaço entre título e timeline */
-  position: relative;
-  display: inline-block; /* importante para a linha ficar só sob o título */
-  padding-bottom: 10px; /* espaço interno para a linha */
+  margin-bottom: 40px;      /* espaço entre título e timeline */
+  position: relative;        /* necessário para o ::after */
+  display: inline-block;     /* a linha ficará só abaixo do título */
+  padding-bottom: 10px;
 }
 
-/* Linha dourada fininha full-width */
-#nosso-dia::after {
+/* Linha fininha dourada logo abaixo do título */
+#nosso-dia h2::after {
   content: '';
   position: absolute;
-  left: 50%;            /* começa no centro */
-  bottom: 0;            /* embaixo do título */
+  left: 50%;                /* começa no centro do título */
+  bottom: 0;                /* embaixo do texto */
   transform: translateX(-50%); /* centraliza horizontalmente */
-  width: 80%;            /* comprimento da linha */
-  height: 1px;           /* linha bem fininha */
+  width: 80%;               /* largura da linha relativa ao título */
+  height: 1px;              /* linha fininha */
   background-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(191,162,86,0.3); /* glow subtil */
   border-radius: 1px;
 }
+
+
 /* Timeline vertical */
 .timeline {
   display: flex;
