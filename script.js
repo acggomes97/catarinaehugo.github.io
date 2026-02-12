@@ -102,9 +102,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* ---------------- FORMULÁRIO DE MÚSICA ---------------- */
 const musicForm = document.getElementById('musicasForm');
-if (musicForm) {
-  musicForm.addEventListener('submit', () => {
-    alert('Obrigado pela tua sugestão musical ✦');
-  });
-}
+const successMsg = document.getElementById('form-success');
 
+musicForm.addEventListener('submit', (e) => {
+  // Mostra a mensagem de sucesso
+  successMsg.style.display = 'block';
+
+  // Esconde depois de 3 segundos
+  setTimeout(() => {
+    successMsg.style.display = 'none';
+  }, 3000);
+
+  // Mantém o envio para Formspree
+});
