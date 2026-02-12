@@ -253,6 +253,18 @@ section {
   border-radius: 1px;
 }
 
+.timeline::before {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.5s ease;
+}
+
+/* ativa quando timeline aparece */
+.timeline.animate::before {
+  transform: scaleY(1);
+}
+
+
 /* Cada evento */
 .event {
   position: relative;
@@ -518,3 +530,23 @@ footer {
     height: 200px;
   }
 }
+
+/* ---------- animação base ---------- */
+
+.timeline .event {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* quando visível */
+.timeline .event.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event.start.show,
+.event.end.show {
+  transform: translateY(0) scale(1.03);
+}
+
