@@ -132,18 +132,22 @@
 
   <form id="musicasForm" action="https://formspree.io/f/mqedpbjj" method="POST">
     <!-- Sugestão de música -->
-    <label for="sugestao">✨ Sugestão de Música</label>
+    <label for="sugestao">Sugestão de Música</label>
     <input type="text" id="sugestao" name="sugestao" placeholder="Ex: Clair de Lune - Debussy" required>
 
     <!-- Link opcional -->
-    <label for="link">✨ Link da Gravação (opcional)</label>
+    <label for="link">Link (opcional)</label>
     <input type="url" id="link" name="link" placeholder="https://">
 
     <!-- Mensagem opcional -->
-    <label for="mensagem">✨ Mensagem (opcional)</label>
+    <label for="mensagem">Mensagem (opcional)</label>
     <textarea id="mensagem" name="mensagem" placeholder="Deixa aqui uma mensagem..."></textarea>
 
     <button type="submit">Enviar Música ✦</button>
+    <div id="form-success" style="display:none; color:var(--color-accent); margin-top:10px; font-style:italic;">
+  Sugestão enviada! Obrigado ✦
+</div>
+    
   </form>
 </section>
 
