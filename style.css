@@ -208,34 +208,43 @@ section {
 /* ---------------- IGREJA & QUINTA ---------------- */
 
 /* Wrapper branco envolvendo os dois locais */
-.white-box {
+
+/* Wrapper das duas localizações */
+.igreja-quinta-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  justify-content: center;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Local boxes */
+/* Cada box individual */
 #igreja-quinta .local-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
   flex: 1;
-  background: transparent; /* remover cor de fundo anterior */
-  padding: 0;              /* opcional */
-  box-shadow: none;        /* remover sombras */
+  min-width: 320px;
+  transition: 0.3s;
 }
 
-/* Wedding icon */
-.wedding-icon {
-  font-size: 3em;
-  text-align: center;
-  color: var(--color-accent);
-  margin: 0 15px; /* espaço entre igreja e quinta */
+#igreja-quinta .local-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
+
+/* Títulos Igreja & Quinta */
+#igreja-quinta .local-box h3 {
+  font-size: 1.6em;
+  color: var(--color-primary);
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+
 
 /* Horas grandes e douradas */
 .local-box .hora {
