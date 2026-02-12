@@ -208,9 +208,9 @@ section {
 
 /* ---------------- NOSSO DIA - TIMELINE ---------------- */
 
-/* Seção "O Nosso Dia" precisa de position relative */
+/* Seção precisa ser relative para qualquer ajuste futuro */
 #nosso-dia {
-  position: relative; /* necessário para posicionar a linha full-width */
+  position: relative;
 }
 
 /* Título "O Nosso Dia" */
@@ -218,22 +218,23 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2em;
   color: var(--color-primary);
-  text-align: center;       /* título centrado */
+  text-align: center;      
   letter-spacing: 1px;
-  margin-bottom: 40px;      /* espaço entre título e timeline */
-  display: block;            /* ocupa toda largura da seção */
-  padding-bottom: 10px;      /* espaço interno para a linha */
-  position: relative;        /* necessário se usar ::after no título */
+  margin-bottom: 40px;     
+  display: block;          
+  position: relative;       /* necessário para ::after */
+  padding-bottom: 0;        /* sem padding extra */
 }
 
-/* Linha fininha dourada logo abaixo do título */
-#nosso-dia::after {
+/* Linha dourada fininha full-width abaixo do título */
+#nosso-dia h2::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: calc(100% - 10px); /* ajusta logo abaixo do título */
-  width: 100vw;              /* ocupa toda a largura da tela */
-  height: 1px;               /* linha bem fininha */
+  left: 50%;              /* começa no centro */
+  top: 100%;              /* logo abaixo do título */
+  transform: translateX(-50%);
+  width: 100vw;           /* cobre toda a largura da tela */
+  height: 1px;            
   background-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(191,162,86,0.3); /* glow subtil */
   border-radius: 1px;
