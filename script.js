@@ -111,7 +111,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const musicForm = document.getElementById('musicasForm');
 
 musicForm.addEventListener('submit', (e) => {
-  e.preventDefault();
   alert('Obrigado pela tua sugestão musical ✦');
-  musicForm.reset();
-});
+  // não prevent default, pois queremos enviar para Formspree
+})
+
