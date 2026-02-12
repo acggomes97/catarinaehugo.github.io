@@ -104,14 +104,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const musicForm = document.getElementById('musicasForm');
 const successMsg = document.getElementById('form-success');
 
-musicForm.addEventListener('submit', (e) => {
-  // Mostra a mensagem de sucesso
-  successMsg.style.display = 'block';
+if (musicForm && successMsg) {
+  musicForm.addEventListener('submit', () => {
+    // Mostra a mensagem de sucesso
+    successMsg.style.display = 'block';
 
-  // Esconde depois de 3 segundos
-  setTimeout(() => {
-    successMsg.style.display = 'none';
-  }, 3000);
+    // Esconde depois de 3 segundos
+    setTimeout(() => successMsg.style.display = 'none', 3000);
+    musicForm.reset(); // limpa os campos
 
-  // Mantém o envio para Formspree
-});
+    // Não precisa do e.preventDefault(), pois queremos enviar para Formspree
+  });
+}
