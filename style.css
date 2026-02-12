@@ -287,6 +287,32 @@ section {
   line-height: 1.5em;
 }
 
+/* -------- Início ornamental -------- */
+.event.start {
+  text-align: center;
+  font-size: 1.1em;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+/* remove o marcador ✦ automático */
+.event.start::before {
+  content: '';
+}
+
+/* -------- Fim editorial -------- */
+.event.end {
+  font-style: italic;
+  font-size: 1.05em;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+/* remove o marcador ✦ automático */
+.event.end::before {
+  content: '';
+}
+
 /* ---------------- IGREJA & QUINTA ---------------- */
 
 /* Wrapper branco envolvendo os dois locais */
