@@ -211,24 +211,27 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2em;
   color: var(--color-primary);
-  text-align: center;
+  text-align: center;   /* título centralizado */
   letter-spacing: 1px;
-  margin-bottom: 30px; /* espaço para a linha dourada */
+  margin-bottom: 40px;  /* espaço entre título e timeline */
   position: relative;
-  display: block;
+  display: inline-block; /* importante para a linha ficar só sob o título */
+  padding-bottom: 10px; /* espaço interno para a linha */
 }
 
 /* Linha dourada fininha full-width */
 #nosso-dia::after {
   content: '';
-  display: block;
-  width: 100%;                /* ocupa toda a largura da página */
-  height: 2px;                /* espessura da linha */
+  position: absolute;
+  left: 50%;            /* começa no centro */
+  bottom: 0;            /* embaixo do título */
+  transform: translateX(-50%); /* centraliza horizontalmente */
+  width: 80%;            /* comprimento da linha */
+  height: 1px;           /* linha bem fininha */
   background-color: var(--color-accent);
-  margin: 0 auto 40px;        /* espaço acima e abaixo */
-  box-shadow: 0 0 10px rgba(191,162,86,0.4); /* glow subtil */
+  box-shadow: 0 0 5px rgba(191,162,86,0.3); /* glow subtil */
+  border-radius: 1px;
 }
-
 /* Timeline vertical */
 .timeline {
   display: flex;
