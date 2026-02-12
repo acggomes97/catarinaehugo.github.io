@@ -211,23 +211,22 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.2em;
   color: var(--color-primary);
-  margin-bottom: 35px;
   text-align: center;
   letter-spacing: 1px;
+  margin-bottom: 30px; /* espaço para a linha dourada */
   position: relative;
-  display: inline-block;
-  padding-bottom: 12px;
+  display: block;
 }
 
-/* Linha dourada abaixo do título */
-#nosso-dia h2::after {
+/* Linha dourada fininha full-width */
+#nosso-dia::after {
   content: '';
   display: block;
-  width: 60px;                  /* comprimento da linha */
-  border-top: 2px solid var(--color-accent);
-  margin: 8px auto 0;
-  box-shadow: 0 0 10px rgba(191,162,86,0.5); /* glow dourado */
-  border-radius: 2px;
+  width: 100%;                /* ocupa toda a largura da página */
+  height: 2px;                /* espessura da linha */
+  background-color: var(--color-accent);
+  margin: 0 auto 40px;        /* espaço acima e abaixo */
+  box-shadow: 0 0 10px rgba(191,162,86,0.4); /* glow subtil */
 }
 
 /* Timeline vertical */
