@@ -209,14 +209,14 @@ section {
 /* ---------------- NOSSO DIA - TIMELINE ---------------- */
 #nosso-dia h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5em;
+  font-size: 2.2em;
   color: var(--color-primary);
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   text-align: center;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
 }
 
 /* Linha dourada abaixo do título */
@@ -234,7 +234,7 @@ section {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 28px;
   max-width: 700px;
   margin: 0 auto;
   position: relative;
@@ -263,25 +263,25 @@ section {
   position: absolute;
   left: -2px;
   top: 0;
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--color-accent);
 }
 
 /* Título do evento */
 .event-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-  text-transform: uppercase; /* mais elegante */
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+  text-transform: none; /* mais elegante */
 }
 
 /* Descrição do evento */
 .event-desc {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.1em;
+  font-size: 1em;
   color: var(--color-text);
   line-height: 1.5em;
 }
