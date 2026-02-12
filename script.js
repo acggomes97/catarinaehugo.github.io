@@ -1,127 +1,77 @@
 /* ---------------- CONTAGEM REGRESSIVA ---------------- */
-
 const countdownEl = document.getElementById('countdown');
-const weddingDate = new Date('2026-05-23T11:00:00');
+if (countdownEl) {
+  const weddingDate = new Date('2026-05-23T11:00:00');
 
-function updateCountdown() {
-  const now = new Date();
-  const diff = weddingDate - now;
+  function updateCountdown() {
+    const now = new Date();
+    const diff = weddingDate - now;
 
-  if (diff <= 0) {
-    countdownEl.textContent = "🎉 É HOJE! 🎉";
-    clearInterval(interval);
-    startParty();
-    return;
+    if (diff <= 0) {
+      countdownEl.textContent = "🎉 É HOJE! 🎉";
+      clearInterval(interval);
+      startParty();
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdownEl.textContent = `${days} dias ${hours}h ${minutes}m ${seconds}s`;
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  countdownEl.textContent =
-    `${days} dias ${hours}h ${minutes}m ${seconds}s`;
+  const interval = setInterval(updateCountdown, 1000);
+  updateCountdown();
 }
-
-const interval = setInterval(updateCountdown, 1000);
-updateCountdown();
-
 
 /* ---------------- FESTA 🎉 ---------------- */
-
 const canvas = document.getElementById('festa');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-
-function startParty() {
-  setInterval(() => {
-    for (let i = 0; i < 80; i++) {
-      particles.push({
-        x: canvas.width / 2,
-        y: canvas.height / 2,
-        vx: (Math.random() - 0.5) * 10,
-        vy: (Math.random() - 0.5) * 10,
-        life: 100
-      });
-    }
-  }, 300);
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
-    p.life--;
-
-    ctx.fillStyle = `hsl(${Math.random() * 360},100%,60%)`;
-    ctx.fillRect(p.x, p.y, 3, 3);
-  });
-
-  particles = particles.filter(p => p.life > 0);
-
-  requestAnimationFrame(animate);
-}
-
-animate();
-
-window.addEventListener('resize', () => {
+if (canvas) {
+  const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-});
 
-/* -------- animação timeline -------- */
+  let particles = [];
 
-const timeline = document.querySelector('.timeline');
-const events = document.querySelectorAll('.timeline .event');
+  function startParty() {
+    setInterval(() => {
+      for (let i = 0; i < 80; i++) {
+        particles.push({
+          x: canvas.width / 2,
+          y: canvas.height / 2,
+          vx: (Math.random() - 0.5) * 10,
+          vy: (Math.random() - 0.5) * 10,
+          life: 100
+        });
+      }
+    }, 300);
+  }
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      timeline.classList.add('animate');
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      events.forEach((event, i) => {
-        setTimeout(() => {
-          event.classList.add('show');
-        }, i * 150); // delay em cascata
-      });
-    }
-  });
-}, { threshold: 0.3 });
-
-observer.observe(timeline);
-
-/* ---------- SCROLL SUAVE ---------- */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+      ctx.fillStyle = `hsl(${Math.random() * 360},100%,60%)`;
+      ctx.fillRect(p.x, p.y, 3, 3);
     });
-  });
-});
 
-/* ---------------- FORMULÁRIO DE MÚSICA ---------------- */
-const musicForm = document.getElementById('musicasForm');
+    particles = particles.filter(p => p.life > 0);
+    requestAnimationFrame(animate);
+  }
 
-musicForm.addEventListener('submit', (e) => {
-  alert('Obrigado pela tua sugestão musical ✦');
-  // não prevent default, pois queremos enviar para Formspree
-})
-
-const musicForm = document.getElementById('musicasForm');
-if (musicForm) {
-  musicForm.addEventListener('submit', () => {
-    alert('Obrigado pela tua sugestão musical ✦');
+  animate();
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
   });
 }
 
+/* ---------------- TIMELINE ---------------- */
 const timeline = document.querySelector('.timeline');
 if (timeline) {
   const events = timeline.querySelectorAll('.event');
@@ -137,5 +87,24 @@ if (timeline) {
   }, { threshold: 0.3 });
 
   observer.observe(timeline);
+}
+
+/* ---------------- SCROLL SUAVE ---------------- */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ---------------- FORMULÁRIO DE MÚSICA ---------------- */
+const musicForm = document.getElementById('musicasForm');
+if (musicForm) {
+  musicForm.addEventListener('submit', () => {
+    alert('Obrigado pela tua sugestão musical ✦');
+  });
 }
 
