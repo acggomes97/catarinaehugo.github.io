@@ -224,11 +224,10 @@ section {
 #nosso-dia h2::after {
   content: '';
   position: absolute;
-  left: 50%;                /* começa no centro do título */
-  bottom: 0;                /* embaixo do texto */
-  transform: translateX(-50%); /* centraliza horizontalmente */
-  width: 80%;               /* largura da linha relativa ao título */
-  height: 1px;              /* linha fininha */
+  left: 0;                   /* começa na esquerda da página */
+  bottom: 0;                  /* logo abaixo do título */
+  width: 100%;                /* cobre toda a largura da seção */
+  height: 1px;                /* linha bem fininha */
   background-color: var(--color-accent);
   box-shadow: 0 0 5px rgba(191,162,86,0.3); /* glow subtil */
   border-radius: 1px;
