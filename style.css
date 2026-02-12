@@ -66,14 +66,15 @@ nav {
   color: var(--color-primary);
   font-weight: 700;
   font-family: ''Cormorant Garamond', serif;
-  padding: 10px 0;
+  padding: 12px 0;
+  font-size: 1.1em;      /* maior que o normal */
   display: block;
   transition: 0.3s;
 }
 
 .nav-list li a:hover {
   color: var(--color-accent);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /* Hamburger (mobile) */
@@ -205,6 +206,67 @@ section {
   transform: translateY(0);
 }
 
+/* ---------------- NOSSO DIA - TIMELINE ---------------- */
+#nosso-dia h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5em;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent 20%, var(--color-accent) 40%, transparent 60%, var(--color-accent));
+  opacity: 0.3;
+}
+
+.event {
+  position: relative;
+  padding-left: 20px;
+}
+
+.event::before {
+  content: '✦';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  font-size: 1.2em;
+  color: var(--color-accent);
+}
+
+.event-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.event-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  color: var(--color-text);
+  line-height: 1.5em;
+}
+
 /* ---------------- IGREJA & QUINTA ---------------- */
 
 /* Wrapper branco envolvendo os dois locais */
@@ -292,32 +354,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* Timeline */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.event {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.event .time {
-  font-weight: bold;
-  color: var(--color-accent);
-  min-width: 60px;
-  font-family: 'Cormorant Garamond', serif;
-}
-
-.event .desc {
-  font-size: 1.1em;
-  font-family: 'Cormorant Garamond', serif;
-}
 
 /* ---------------- MÚSICA ---------------- */
 #musica p.frase-musica {
