@@ -105,14 +105,14 @@ const musicForm = document.getElementById('musicasForm');
 const successMsg = document.getElementById('form-success');
 
 if (musicForm && successMsg) {
-  musicForm.addEventListener('submit', () => {
+  musicForm.addEventListener('submit', (e) => {
     // Mostra a mensagem de sucesso
     successMsg.style.display = 'block';
 
-    // Esconde depois de 3 segundos
+    // Fade out após 3s
     setTimeout(() => successMsg.style.display = 'none', 3000);
-    musicForm.reset(); // limpa os campos
 
-    // Não precisa do e.preventDefault(), pois queremos enviar para Formspree
+    // NÃO resetamos aqui! Formspree precisa dos dados
+    // musicForm.reset(); <-- remover ou colocar depois que Formspree confirma
   });
 }
