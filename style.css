@@ -514,6 +514,8 @@ h2 {
   background: var(--color-accent);
   color: var(--color-primary);
   box-shadow: 0 0 12px rgba(191,162,86,0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 /* ---------------- CONTACTOS ---------------- */
