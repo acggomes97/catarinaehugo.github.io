@@ -115,3 +115,27 @@ musicForm.addEventListener('submit', (e) => {
   // não prevent default, pois queremos enviar para Formspree
 })
 
+const musicForm = document.getElementById('musicasForm');
+if (musicForm) {
+  musicForm.addEventListener('submit', () => {
+    alert('Obrigado pela tua sugestão musical ✦');
+  });
+}
+
+const timeline = document.querySelector('.timeline');
+if (timeline) {
+  const events = timeline.querySelectorAll('.event');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        timeline.classList.add('animate');
+        events.forEach((event, i) => {
+          setTimeout(() => event.classList.add('show'), i * 150);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(timeline);
+}
+
