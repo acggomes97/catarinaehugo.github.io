@@ -226,20 +226,6 @@ section {
   padding-bottom: 0;        /* sem padding extra */
 }
 
-/* Linha dourada fininha full-width abaixo do título */
-#nosso-dia h2::after {
-  content: '';
-  position: absolute;
-  left: 50%;              /* começa no centro */
-  top: 100%;              /* logo abaixo do título */
-  transform: translateX(-50%);
-  width: 100vw;           /* cobre toda a largura da tela */
-  height: 1px;            
-  background-color: var(--color-accent);
-  box-shadow: 0 0 5px rgba(191,162,86,0.3); /* glow subtil */
-  border-radius: 1px;
-}
-
 
 /* Timeline vertical */
 .timeline {
