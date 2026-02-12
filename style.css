@@ -137,7 +137,7 @@ nav {
 }
 
 #catarina-hugo {
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
@@ -211,22 +211,22 @@ section {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2.5em;
   color: var(--color-primary);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   letter-spacing: 1px;
   position: relative;
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 /* Linha dourada abaixo do título */
 #nosso-dia h2::after {
   content: '';
   display: block;
-  width: 80px;
-  height: 3px;
-  background-color: var(--color-accent);
-  margin: 10px auto 0;
+  width: 60px;                  /* comprimento da linha */
+  border-top: 2px solid var(--color-accent);
+  margin: 8px auto 0;
+  box-shadow: 0 0 10px rgba(191,162,86,0.5); /* glow dourado */
   border-radius: 2px;
 }
 
