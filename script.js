@@ -95,3 +95,15 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 
 observer.observe(timeline);
+
+/* ---------- SCROLL SUAVE ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
+
