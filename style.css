@@ -657,13 +657,12 @@ footer {
   }
 
   .contact-card {
-    flex: 0 1 250px;       /* flex-grow:0, flex-shrink:1, base width 250px */
-    max-width: 250px;      /* largura fixa máxima */
-    word-wrap: break-word; /* força o email a quebrar linhas se for muito grande */
-    background: #ffffff;
+    flex: 1;                 /* todos crescem igualmente para ocupar o mesmo espaço */
+    min-width: 220px;        /* evita que fiquem muito estreitos em telas pequenas */
     padding: 30px 35px;
     border-radius: 12px;
     border: 1px solid rgba(191,162,86,0.3);
+    background: #ffffff;
     text-align: center;
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     display: flex;
