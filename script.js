@@ -148,6 +148,5 @@ if (menuToggle && navList) {
   // Abre/fecha menu ao clicar no hamburguer
   menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
-  });
 });
   
