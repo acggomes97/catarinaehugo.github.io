@@ -878,7 +878,7 @@ footer {
 
 /* telefone */
 .contact-card p:first-of-type {
-  font-family: 'Playfair Display', monospace;
+  font-family: 'Cormorant Garamond', monospace;
   font-size: 0.95em;
   letter-spacing: 1px;
   color: var(--color-primary);
