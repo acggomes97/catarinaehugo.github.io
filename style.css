@@ -171,6 +171,8 @@ nav {
 
 /* Texto acima da imagem */
 .hero-text {
+  position: relative;
+  z-index: 1;
   text-align: center;
   margin-bottom: 20px; /* espaço entre o texto e a imagem */
 }
