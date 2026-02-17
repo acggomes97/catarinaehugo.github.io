@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-
 /* ---------------- CONTAGEM REGRESSIVA ---------------- */
 const countdownEl = document.getElementById('countdown');
 if (countdownEl) {
@@ -151,22 +149,5 @@ if (menuToggle && navList) {
   menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
   });
-
-  // Fecha o menu + scroll suave ao clicar num link
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    
-    // scroll suave só se houver target
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    // fecha o menu somente se estiver aberto (mobile)
-    if (navList.classList.contains('active')) {
-      navList.classList.remove('active');
-    }
-    });
-  });
+});
   
-}); // <- FECHA O DOMCONTENTLOADED
