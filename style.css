@@ -210,6 +210,16 @@ section {
   transform: translateY(0);
 }
 
+/* Parallax leve para seções específicas */
+.section-parallax {
+  background-attachment: fixed;  /* efeito parallax */
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  padding: 80px 20px;
+  color: var(--color-text);
+}
+
 /* ---------------- NOSSO DIA - TIMELINE ---------------- */
 
 /* Seção precisa ser relative para qualquer ajuste futuro */
