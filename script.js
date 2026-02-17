@@ -139,3 +139,22 @@ const observerContact = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 contactCards.forEach(card => observerContact.observe(card));
+
+/* ---------------- MENU HAMBURGER ---------------- */
+const toggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+if (toggle && navList) {
+  toggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
+  // Fecha o menu ao clicar num link
+  const navLinks = document.querySelectorAll('.nav-list li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('active');
+    });
+  });
+}
