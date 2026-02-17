@@ -52,7 +52,9 @@ nav {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8em;
   font-weight: bold;
+  text-decoration: none; /* tira o underline */
   color: var(--color-primary);
+  cursor: pointer;
 }
 
 /* Navbar links */
