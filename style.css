@@ -651,17 +651,17 @@ footer {
   /* Ajustes dos contactos no mobile */
   .contact-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: stretch;  /* garante que todos tenham mesma altura */
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;   /* empilha verticalmente no mobile */
+    align-items: center;      /* centraliza horizontalmente */
+    gap: 15px;                /* espaçamento entre os cartões */
     width: 90%;
     margin: 0 auto;
   }
 
   .contact-card {
-    flex: 1 1 150px;                 
-    max-width: 250px;  
+    width: 90%;              /* ocupa quase toda a tela */
+    max-width: 300px;        /* evita ficar gigante */
+    min-width: 250px;        /* evita quebrar número */
     padding: 20px 15px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -887,5 +887,5 @@ footer {
   letter-spacing: 1px;
   color: var(--color-primary);
   font-weight: 500;
-  white-space: nowrap;
+  white-space: nowrap;  /* esta linha impede quebra */
 }
