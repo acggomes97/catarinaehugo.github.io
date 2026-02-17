@@ -878,17 +878,9 @@ footer {
 
 /* telefone */
 .contact-card p:first-of-type {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Playfair Display', monospace;
   font-size: 0.95em;
   letter-spacing: 1px;
   color: var(--color-primary);
   font-weight: 500;
-}
-
-/* email */
-.contact-card p:last-of-type {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.95em;
-  opacity: 0.9;
 }
