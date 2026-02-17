@@ -865,8 +865,8 @@ footer {
 /* telefone */
 .contact-card p:first-of-type {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.15em;
-  letter-spacing: 1.5px;
+  font-size: 0.95em;
+  letter-spacing: 1px;
   color: var(--color-primary);
   font-weight: 500;
 }
