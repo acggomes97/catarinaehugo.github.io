@@ -773,9 +773,12 @@ footer {
 }
 
 .contact-card p {
-  font-size: 1.05em;
-  line-height: 1.6em;
-  opacity: 0.85;
+  font-family: 'Playfair Display', serif; /* fonte elegante */
+  font-size: 1.1em;                       /* tamanho confortável */
+  font-weight: 500;                        /* não muito pesado */
+  color: var(--color-primary);            /* vermelho antigo */
+  letter-spacing: 1px;                     /* ligeiro espaçamento */
+  margin-bottom: 8px;                      /* espaço para o resto do conteúdo */
 }
 
 /* --- FRASE IMPACTANTE --- */
