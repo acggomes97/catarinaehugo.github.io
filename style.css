@@ -19,7 +19,9 @@ body {
   font-family: 'Cormorant Garamond', serif;
   color: var(--color-text);
   scroll-behavior: smooth;
-  background: var(--color-bg);
+  background: linear-gradient(to bottom, #f9f6f2, #fff8e7);
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-blend-mode: overlay;
 }
 
 html {
@@ -114,6 +116,21 @@ nav {
   z-index: 0;
 }
 
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(191,162,86,0.4);
+  border-radius: 50%;
+  animation: float 6s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.2; }
+  50% { transform: translateY(-80px) translateX(20px); opacity: 0.5; }
+  100% { transform: translateY(0) translateX(-20px); opacity: 0.2; }
+}
+
 .countdown {
   font-size: 0.95em;
   font-weight: 300;
@@ -186,6 +203,14 @@ nav {
   display: block;
 }
 
+.hero-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: radial-gradient(circle, rgba(191,162,86,0.15) 0%, rgba(0,0,0,0.05) 80%);
+  pointer-events: none;
+}
 
 /* ---------------- SECTIONS ---------------- */
 section {
@@ -201,8 +226,13 @@ section {
 
 .fade-section {
   opacity: 0;
-  transform: translateY(50px);
-  transition: 1s;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fade-section.fade-in {
@@ -544,10 +574,11 @@ h2 {
 
 /* ---------------- FOOTER ---------------- */
 footer {
-  background: var(--color-primary);
-  color: white;
+  background: linear-gradient(135deg, #f9f6f2, #fdf7e4);
+  color: var(--color-primary);
   padding: 20px;
   text-align: center;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 /* ---------------- RESPONSIVO ---------------- */
