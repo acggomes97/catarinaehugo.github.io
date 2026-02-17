@@ -609,6 +609,11 @@ footer {
     align-items: center;
   }
 
+  .contact-card {
+  margin: 0 auto; /* força centralização */
+  min-width: 80%; /* opcional, deixa mais responsivo */
+  }
+
   /* Linha dourada horizontal */
   .linha-dourada {
     width: 60%;
