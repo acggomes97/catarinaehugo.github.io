@@ -650,16 +650,25 @@ footer {
   
   /* Ajustes dos contactos no mobile */
   .contact-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
   }
 
   .contact-card {
+    flex: 0 1 250px;       /* flex-grow:0, flex-shrink:1, base width 250px */
+    max-width: 250px;      /* largura fixa máxima */
+    word-wrap: break-word; /* força o email a quebrar linhas se for muito grande */
+    background: #ffffff;
+    padding: 30px 35px;
+    border-radius: 12px;
+    border: 1px solid rgba(191,162,86,0.3);
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     display: flex;
-    flex-direction: column; /* mantém os elementos empilhados verticalmente */
-    justify-content: flex-start; /* espaço equilibrado entre telefone, email e nome */
-    height: 100%; /* 🔥 faz o cartão ocupar toda a altura disponível */
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   /* Linha dourada horizontal */
