@@ -653,14 +653,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: stretch;  /* garante que todos tenham mesma altura */
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
+    max-width: 400xp;
+    margin: 0 auto;
   }
 
   .contact-card {
-    flex: 1;                 /* todos crescem igualmente para ocupar o mesmo espaço */
-    min-width: 220px;        /* evita que fiquem muito estreitos em telas pequenas */
-    padding: 30px 35px;
+    flex: 0 0 180px;                 
+    max-width: 180px;  
+    padding: 20px 15px;
+    height: auto;
+    box-sizing: border-box;
     border-radius: 12px;
     border: 1px solid rgba(191,162,86,0.3);
     background: #ffffff;
