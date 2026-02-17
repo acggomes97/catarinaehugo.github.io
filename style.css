@@ -773,26 +773,6 @@ footer {
   margin-bottom: 8px;
 }
 
-/* --- BOTÃO COPIAR --- */
-.copy-btn {
-  margin-top: 10px;
-  padding: 6px 14px;
-  font-size: 0.95em;
-  border-radius: 6px;
-  border: 1px solid var(--color-accent);
-  background: transparent;
-  color: var(--color-primary);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.copy-btn:hover {
-  background: var(--color-accent);
-  color: var(--color-primary);
-  box-shadow: 0 0 12px rgba(191,162,86,0.4);
-  transform: scale(1.05);
-}
-
 /* --- LINHA DOURADA ENTRE OS CARTÕES --- */
 .linha-dourada {
   width: 2px;
