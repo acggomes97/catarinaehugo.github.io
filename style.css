@@ -510,11 +510,6 @@ h2 {
   transition: 0.3s;
 }
 
-#musicasForm button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
 #musicasForm button:hover {
   background: var(--color-accent);
   color: var(--color-primary);
