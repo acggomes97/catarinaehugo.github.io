@@ -111,10 +111,6 @@ if (musicForm && successMsg) {
   musicForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Loading elegante
-    button.textContent = "Enviando… ✦";
-    button.disabled = true;
-
     const data = new FormData(musicForm);
 
     try {
@@ -140,8 +136,5 @@ if (musicForm && successMsg) {
       alert("Erro de ligação. Tenta novamente.");
     }
 
-    // Voltar ao normal
-    button.textContent = originalText;
-    button.disabled = false;
   });
 }
