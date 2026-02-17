@@ -653,6 +653,7 @@ footer {
     display: flex;
     flex-direction: column;   /* empilha verticalmente no mobile */
     align-items: center;      /* centraliza horizontalmente */
+    justify-content: center;
     gap: 15px;                /* espaçamento entre os cartões */
     width: 90%;
     margin: 0 auto;
@@ -671,7 +672,7 @@ footer {
     box-shadow: 0 6px 18px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   /* Linha dourada horizontal */
