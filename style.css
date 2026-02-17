@@ -652,6 +652,7 @@ footer {
   .contact-wrapper {
     display: flex;
     justify-content: center;
+    align-items: stretch;  /* garante que todos tenham mesma altura */
     gap: 30px;
     flex-wrap: wrap;
   }
