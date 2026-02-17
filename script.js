@@ -139,14 +139,3 @@ const observerContact = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 contactCards.forEach(card => observerContact.observe(card));
-
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav-list');
-const navLinks = document.querySelectorAll('.nav-list li a');
-
-if (menuToggle && navList) {
-  // Abre/fecha menu ao clicar no hamburguer
-  menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
-  
