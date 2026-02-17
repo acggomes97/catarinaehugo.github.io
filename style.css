@@ -134,6 +134,7 @@ nav {
 }
 
 .countdown {
+  position: relative;
   font-size: 0.95em;
   font-weight: 300;
   color: var(--color-accent); /* dourado */
