@@ -601,6 +601,20 @@ footer {
   .local-box iframe {
     height: 200px;
   }
+  
+  /* Ajustes dos contactos no mobile */
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .linha-dourada {
+    width: 60%;
+    height: 2px;
+    margin: 10px 0; /* espaço entre cartões */
+    align-self: center;
+  }
 }
 
 /* ---------- animação base ---------- */
