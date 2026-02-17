@@ -87,19 +87,8 @@ if (timeline) {
   }, { threshold: 0.3 });
 
   observer.observe(timeline);
+
 }
-
-/* ---------------- SCROLL SUAVE ---------------- */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
 /* ---------------- FORMULÁRIO DE MÚSICA (AJAX + LOADING) ---------------- */
 const musicForm = document.getElementById('musicasForm');
 const successMsg = document.getElementById('form-success');
@@ -151,21 +140,26 @@ const observerContact = new IntersectionObserver(entries => {
 
 contactCards.forEach(card => observerContact.observe(card));
 
-/* ---------------- MENU MOBILE ---------------- */
 const menuToggle = document.querySelector('.menu-toggle');
 const navList = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-list li a');
 
 if (menuToggle && navList) {
-  // Abre/fecha o menu ao clicar no hambúrguer
+  // Abre/fecha menu ao clicar no hamburguer
   menuToggle.addEventListener('click', () => {
     navList.classList.toggle('active');
   });
 
-  // Fecha o menu quando clicas num link
+  // Fecha o menu + scroll suave ao clicar num link
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('active');
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      navList.classList.remove('active'); // fecha o menu
+
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 }
