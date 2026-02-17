@@ -653,15 +653,16 @@ footer {
     display: flex;
     flex-direction: column;   /* empilha verticalmente no mobile */
     align-items: center;      /* centraliza horizontalmente */
-    gap: 15px;                /* espaçamento entre os cartões */
+    justify-content: center;
+    gap: 20px;                /* espaçamento entre os cartões */
     width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
   }
 
   .contact-card {
     width: 90%;              /* ocupa quase toda a tela */
     max-width: 300px;        /* evita ficar gigante */
-    min-width: 0px;        /* evita quebrar número */
     padding: 20px 15px;
     box-sizing: border-box;
     border-radius: 12px;
@@ -679,8 +680,10 @@ footer {
   .linha-dourada {
     width: 60%;
     height: 2px;
-    margin: 10px 0; /* espaço entre cartões */
-    align-self: center;
+    background: var(--color-accent);
+    opacity: 0.4;
+    border-radius: 1px;
+    margin: 0 auto;           /* centraliza horizontalmente */
   }
 }
 
