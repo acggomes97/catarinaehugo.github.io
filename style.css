@@ -806,10 +806,11 @@ footer {
 /* --- CARTÃO INDIVIDUAL --- */
 .contact-card {
   background: #ffffff;
-  padding: 30px 35px;  /* um pouco menores */
+  padding: 20px 25px;  /* um pouco menores */
   border-radius: 12px;
   border: 1px solid rgba(191,162,86,0.3); /* dourado subtil */
-  min-width: 220px;
+  min-width: 180px;
+  max-width: 220px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.04);
   position: relative;
@@ -839,18 +840,18 @@ footer {
 
 /* --- NOME --- */
 .contact-card h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: var(--color-primary);
-  margin-bottom: 8px;
-  letter-spacing: 1px;
+  margin-bottom: 6px;
+  letter-spacing: 0.8px;
 }
 
 /* --- DETALHES --- */
 .contact-card p {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 0.95em;
+  line-height: 1.4em;
   opacity: 0.85;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 /* --- LINHA DOURADA ENTRE OS CARTÕES --- */
@@ -878,7 +879,7 @@ footer {
 
 /* telefone */
 .contact-card p:first-of-type {
-  font-family: 'Cormorant Garamond', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 0.95em;
   letter-spacing: 1px;
   color: var(--color-primary);
