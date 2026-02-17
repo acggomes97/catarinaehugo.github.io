@@ -100,13 +100,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ---------------- FORMULÁRIO DE MÚSICA (AJAX) ---------------- */
+/* ---------------- FORMULÁRIO DE MÚSICA (AJAX + LOADING) ---------------- */
 const musicForm = document.getElementById('musicasForm');
 const successMsg = document.getElementById('form-success');
 
 if (musicForm && successMsg) {
+  const button = musicForm.querySelector('button');
+  const originalText = button.textContent;
+
   musicForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); // ⛔ impede redirecionamento
+    e.preventDefault();
+
+    // Loading elegante
+    button.textContent = "Enviando… ✦";
+    button.disabled = true;
 
     const data = new FormData(musicForm);
 
@@ -114,18 +121,17 @@ if (musicForm && successMsg) {
       const response = await fetch(musicForm.action, {
         method: musicForm.method,
         body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       });
 
       if (response.ok) {
         successMsg.style.display = 'block';
-        musicForm.reset(); // limpa campos
+        musicForm.reset();
 
         setTimeout(() => {
           successMsg.style.display = 'none';
         }, 3000);
+
       } else {
         alert("Ups! Algo correu mal. Tenta novamente.");
       }
@@ -133,5 +139,9 @@ if (musicForm && successMsg) {
     } catch (error) {
       alert("Erro de ligação. Tenta novamente.");
     }
+
+    // Voltar ao normal
+    button.textContent = originalText;
+    button.disabled = false;
   });
 }
