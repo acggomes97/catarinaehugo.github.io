@@ -791,7 +791,7 @@ footer {
 
 /* --- CARTÃO INDIVIDUAL --- */
 .contact-card {
-  background: #fefaf5; /* tom papel */
+  background: #ffffff;
   padding: 30px 35px;  /* um pouco menores */
   border-radius: 12px;
   border: 1px solid rgba(191,162,86,0.3); /* dourado subtil */
@@ -858,4 +858,23 @@ footer {
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
+}
+
+/* --- TELEFONE & EMAIL MAIS BONITOS --- */
+
+/* telefone */
+.contact-card p:first-of-type {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.15em;
+  letter-spacing: 1.5px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* email */
+.contact-card p:last-of-type {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.05em;
+  opacity: 0.9;
 }
