@@ -661,4 +661,43 @@ footer {
   transform: translateY(0);
 }
 
+/* ---------- contactos ---------- */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 12px;
+  border: 1px solid rgba(191,162,86,0.35);
+  min-width: 260px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.04);
+  transition: 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.contact-card p {
+  font-size: 1.05em;
+  line-height: 1.6em;
+  opacity: 0.85;
+}
 
