@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 /* ---------------- CONTAGEM REGRESSIVA ---------------- */
 const countdownEl = document.getElementById('countdown');
 if (countdownEl) {
@@ -162,4 +164,7 @@ if (menuToggle && navList) {
       }
     });
   });
-}
+  
+}); // <- FECHA O DOMCONTENTLOADED
+
+
