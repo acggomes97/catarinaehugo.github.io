@@ -150,18 +150,3 @@ const observerContact = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 contactCards.forEach(card => observerContact.observe(card));
-
-// --- BOTÃO COPIAR ---
-const copyButtons = document.querySelectorAll('.copy-btn');
-
-copyButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const text = btn.getAttribute('data-clipboard');
-    navigator.clipboard.writeText(text).then(() => {
-      btn.textContent = 'Copiado! ✦';
-      setTimeout(() => {
-        btn.textContent = 'Copiar Contacto';
-      }, 2000);
-    });
-  });
-});
