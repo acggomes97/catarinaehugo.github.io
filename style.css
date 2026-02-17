@@ -609,6 +609,7 @@ footer {
     align-items: center;
   }
 
+  /* Linha dourada horizontal */
   .linha-dourada {
     width: 60%;
     height: 2px;
