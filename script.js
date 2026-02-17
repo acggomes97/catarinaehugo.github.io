@@ -155,16 +155,18 @@ if (menuToggle && navList) {
   // Fecha o menu + scroll suave ao clicar num link
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
-      navList.classList.remove('active'); // fecha o menu
+    const target = document.querySelector(this.getAttribute('href'));
+    
+    // scroll suave só se houver target
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    // fecha o menu somente se estiver aberto (mobile)
+    if (navList.classList.contains('active')) {
+      navList.classList.remove('active');
+    }
     });
   });
   
 }); // <- FECHA O DOMCONTENTLOADED
-
-
