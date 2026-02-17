@@ -650,19 +650,15 @@ footer {
   
   /* Ajustes dos contactos no mobile */
   .contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: stretch; /* 🔥 força mesma altura */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-    position: relative;
-  }    
+  }
 
   .contact-card {
     display: flex;
     flex-direction: column; /* mantém os elementos empilhados verticalmente */
-    justify-content: space-between; /* espaço equilibrado entre telefone, email e nome */
+    justify-content: flex-start; /* espaço equilibrado entre telefone, email e nome */
     height: 100%; /* 🔥 faz o cartão ocupar toda a altura disponível */
   }
 
