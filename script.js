@@ -150,3 +150,22 @@ const observerContact = new IntersectionObserver(entries => {
 }, { threshold: 0.2 });
 
 contactCards.forEach(card => observerContact.observe(card));
+
+/* ---------------- MENU MOBILE ---------------- */
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+const navLinks = document.querySelectorAll('.nav-list li a');
+
+if (menuToggle && navList) {
+  // Abre/fecha o menu ao clicar no hambúrguer
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
+  // Fecha o menu quando clicas num link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('active');
+    });
+  });
+}
