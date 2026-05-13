@@ -910,10 +910,13 @@ footer {
 
 .iban-text {
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.85em !important;
+  font-size: 0.78em !important;
   color: var(--color-primary);
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
   word-break: break-word;
-  line-height: 1.5;
+  max-width: 100%;
 }
 
 .copy-iban {
