@@ -158,3 +158,21 @@ if (toggle && navList) {
     });
   });
 }
+
+/* ---------------- COPIAR IBAN ---------------- */
+document.querySelectorAll('.copy-iban').forEach(button => {
+  button.addEventListener('click', async () => {
+    const iban = button.dataset.iban;
+
+    try {
+      await navigator.clipboard.writeText(iban);
+      button.textContent = 'Copiado ✦';
+
+      setTimeout(() => {
+        button.textContent = 'Copiar IBAN';
+      }, 2000);
+    } catch (err) {
+      alert('Não foi possível copiar o IBAN.');
+    }
+  });
+});
