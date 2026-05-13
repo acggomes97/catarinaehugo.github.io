@@ -893,3 +893,43 @@ footer {
   font-weight: 500;
   white-space: nowrap;  /* esta linha impede quebra */
 }
+
+.iban-box {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(191,162,86,0.3);
+}
+
+.iban-label {
+  display: block;
+  font-size: 0.85em;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.iban-text {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85em !important;
+  color: var(--color-primary);
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.copy-iban {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95em;
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid rgba(191,162,86,0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.copy-iban:hover {
+  background: var(--color-accent);
+  color: white;
+}
