@@ -910,13 +910,13 @@ footer {
 
 .iban-text {
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.78em !important;
+  font-size: 0.70em !important;
   color: var(--color-primary);
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: center;
   margin-bottom: 14px;
 
-  letter-spacing: 0.5px;   /* antes estava demasiado largo */
+  letter-spacing: 0.3px;   /* antes estava demasiado largo */
   white-space: nowrap;     /* mantém numa linha */
   width: 100%;
 }
