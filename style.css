@@ -912,11 +912,13 @@ footer {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.78em !important;
   color: var(--color-primary);
-  line-height: 1.6;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  max-width: 100%;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 14px;
+
+  letter-spacing: 0.5px;   /* antes estava demasiado largo */
+  white-space: nowrap;     /* mantém numa linha */
+  width: 100%;
 }
 
 .copy-iban {
