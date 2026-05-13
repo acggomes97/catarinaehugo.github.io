@@ -166,10 +166,10 @@ document.querySelectorAll('.copy-iban').forEach(button => {
 
     try {
       await navigator.clipboard.writeText(iban);
-      button.textContent = 'Copiado ✦';
+      button.textContent = 'Copiado, obrigado ✦';
 
       setTimeout(() => {
-        button.textContent = 'Enviar um miminho ✦';
+        button.textContent = 'Copiar IBAN ✦';
       }, 2000);
     } catch (err) {
       alert('Não foi possível copiar o IBAN.');
