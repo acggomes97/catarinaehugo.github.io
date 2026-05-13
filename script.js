@@ -169,7 +169,7 @@ document.querySelectorAll('.copy-iban').forEach(button => {
       button.textContent = 'Copiado ✦';
 
       setTimeout(() => {
-        button.textContent = 'Copiar IBAN';
+        button.textContent = 'Enviar um miminho ✦';
       }, 2000);
     } catch (err) {
       alert('Não foi possível copiar o IBAN.');
